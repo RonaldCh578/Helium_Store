@@ -1,0 +1,52 @@
+@import 'vars';
+@import 'utils';
+@import 'media-queries';
+
+header{
+    width: 100%;
+}
+
+h1{
+    margin: 0;
+    padding: 0;
+    @include set_text('Poppins', 700, 2em, $dark_blue);
+}
+
+.container-fluid{
+    padding: 0;
+}
+
+.row{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/*.mobile_menu_icon{
+
+}*/
+
+.general_container{
+    margin: 0;
+    padding: 0;
+
+    @include respond-to($large-desktop){
+        margin: auto;
+        padding: 0;
+        width: 66%;
+    }
+}
+
+.blue_bg{
+    margin: 0;
+    padding: 0;
+    background: $dark_blue;
+    width: 100%;
+}
+
+.white_bg{
+    margin: 0;
+    padding: 0;
+    background: $white;
+    width: 100%;
+}

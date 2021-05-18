@@ -1,0 +1,17 @@
+@mixin set_text($font, $weight, $size, $color){
+    @if $font {
+        font-family: $font;
+    }
+
+    @if $font {
+        font-weight: $weight;
+    }
+
+    @if $size {
+        font-size: $size;
+    }
+
+    @if $color {
+        color: $color;
+    }
+}
