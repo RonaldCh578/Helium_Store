@@ -1,3 +1,4 @@
+/********************************************MAIN ELEMENTS********************************************/
 header {
   width: 100%;
 }
@@ -7,8 +8,35 @@ h1 {
   padding: 0;
   font-family: "Poppins";
   font-weight: 700;
-  font-size: 2em;
+  font-size: 1.6em;
   color: #26374C;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 1.5em;
+  color: #26374C;
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 0.7em;
+  color: #26374C;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  font-family: "Hind Madurai";
+  font-weight: 600;
+  font-size: 1em;
+  color: #F3F7F6;
 }
 
 .container-fluid {
@@ -21,31 +49,125 @@ h1 {
   padding: 0;
 }
 
-/*.mobile_menu_icon{
+.dark_blue {
+  background: #26374C;
+}
 
-}*/
-.general_container {
+.initial_space {
+  margin: 0;
+  padding: 4.5em 0 1em 0;
+}
+
+.logo {
+  margin: auto;
+  padding: 0.1em;
+  width: 2.5em;
+  height: 2.5em;
+  color: #F3F7F6;
+}
+
+.top_nav {
+  width: 100%;
+  padding: 0.5em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.top_nav ul {
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: 100vh;
+  background: #00A7E1;
+  position: absolute;
+  top: 3.45em;
+  left: -150%;
+  border-start-end-radius: 0.9em;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 @media only screen and (min-width: 1200px) {
-  .general_container {
-    margin: auto;
+  .top_nav ul {
+    margin: 0;
     padding: 0;
-    width: 66%;
+    width: 50%;
+    height: auto;
+    background: none;
+    top: 0em;
+    left: 0;
+    -webkit-transition: 0s;
+    transition: 0s;
+    float: right;
+  }
+}
+.top_nav ul li {
+  padding: 1em 0 1em 8em;
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 0.7em;
+  color: #F3F7F6;
+}
+@media only screen and (min-width: 1200px) {
+  .top_nav ul li {
+    display: inline;
+  }
+}
+.top_nav ul li a {
+  color: #F3F7F6;
+  text-decoration: none;
+}
+@media only screen and (min-width: 1200px) {
+  .top_nav ul li a {
+    display: inline-block;
   }
 }
 
-.blue_bg {
-  margin: 0;
-  padding: 0;
-  background: #26374C;
-  width: 100%;
+/*.subcategories{
+    margin: 0;
+    padding: 1em;
+    display: block;
+    background: $light-blue;
 }
 
-.white_bg {
-  margin: 0;
-  padding: 0;
-  background: #F3F7F6;
-  width: 100%;
+.sub_item{
+    display: block;
 }
+
+.sub_link{
+
+}*/
+.mobile_menu_icon {
+  margin: 0;
+  padding: 0.4em 0 0.6em 0;
+  width: 1.8em;
+  height: 1.8em;
+  float: left;
+}
+@media only screen and (min-width: 1200px) {
+  .mobile_menu_icon {
+    display: none;
+  }
+}
+
+.user_menu {
+  margin: 0;
+  padding: 0.1em 0;
+  float: right;
+  color: #00A7E1;
+  font-size: 2em;
+}
+
+#nav_options {
+  display: none;
+}
+
+@media only screen and (max-width: 480px) {
+  #nav_options:checked ~ ul {
+    left: -2.5em;
+  }
+}
+
+/*****************************************SECONDARY ELEMENTS*****************************************/
