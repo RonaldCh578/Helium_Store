@@ -1,3 +1,10 @@
+/*
+Poppins regular: 500
+Poppins semi-bold: 600
+Poppins bold: 700
+
+Hind Madurai regular: 400
+*/
 /********************************************MAIN ELEMENTS********************************************/
 header {
   width: 100%;
@@ -36,7 +43,60 @@ p {
   font-family: "Hind Madurai";
   font-weight: 600;
   font-size: 1em;
+  color: #26374C;
+}
+
+footer {
+  margin: 0;
+  padding: 0;
+}
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0.7em 0;
+  padding: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media only screen and (min-width: 1200px) {
+  footer ul {
+    margin: 2em 0;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+}
+footer ul li {
+  display: inline;
+  margin: 0;
+  padding: 0 0.7em;
+}
+footer ul li a {
+  display: inline-block;
   color: #F3F7F6;
+  font-size: 2em;
+}
+footer p {
+  margin: 0;
+  padding: 0.2em 0 2em 0;
+  text-align: center;
+  line-height: 2em;
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 0.7em;
+  color: #F3F7F6;
+}
+@media only screen and (min-width: 1200px) {
+  footer p {
+    padding: 2em 0;
+    text-align: right;
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 0.9em;
+    color: #F3F7F6;
+  }
 }
 
 .container-fluid {
@@ -84,8 +144,8 @@ p {
   background: #00A7E1;
   position: absolute;
   top: 3.45em;
-  left: -150%;
-  border-start-end-radius: 0.9em;
+  right: -150%;
+  border-top-left-radius: 0.9em;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -93,51 +153,68 @@ p {
   .top_nav ul {
     margin: 0;
     padding: 0;
-    width: 50%;
+    width: 100%;
     height: auto;
     background: none;
-    top: 0em;
-    left: 0;
+    position: unset;
+    top: unset;
+    right: unset;
     -webkit-transition: 0s;
     transition: 0s;
-    float: right;
   }
 }
 .top_nav ul li {
-  padding: 1em 0 1em 8em;
-  font-family: "Poppins";
-  font-weight: 500;
-  font-size: 0.7em;
-  color: #F3F7F6;
+  padding: 1em 0 1em 2em;
+  list-style: none;
 }
 @media only screen and (min-width: 1200px) {
   .top_nav ul li {
     display: inline;
+    padding: 0.3em 1em;
+    float: right;
   }
 }
 .top_nav ul li a {
-  color: #F3F7F6;
   text-decoration: none;
+  display: block;
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 1.5em;
+  color: #F3F7F6;
 }
 @media only screen and (min-width: 1200px) {
   .top_nav ul li a {
     display: inline-block;
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 1.2em;
+    color: #00A7E1;
   }
+}
+.top_nav ul li a span {
+  margin: 0;
+  padding: 0.5em;
+  font-size: 0.9em;
 }
 
 /*.subcategories{
+    display: block;
     margin: 0;
-    padding: 1em;
-    display: block;
-    background: $light-blue;
-}
+    padding: 0;
 
-.sub_item{
-    display: block;
-}
+    @include respond-to($large-desktop){
+        display: block;
+    }
 
-.sub_link{
+    ul{
 
+        li{
+
+            a{
+
+            }
+        }
+    }
 }*/
 .mobile_menu_icon {
   margin: 0;
@@ -164,10 +241,8 @@ p {
   display: none;
 }
 
-@media only screen and (max-width: 480px) {
-  #nav_options:checked ~ ul {
-    left: -2.5em;
-  }
+#nav_options:checked ~ ul {
+  right: -2.5em;
 }
 
 /*****************************************SECONDARY ELEMENTS*****************************************/

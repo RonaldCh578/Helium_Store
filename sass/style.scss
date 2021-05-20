@@ -2,6 +2,14 @@
 @import 'utils';
 @import 'media-queries';
 
+/*
+Poppins regular: 500
+Poppins semi-bold: 600
+Poppins bold: 700
+
+Hind Madurai regular: 400
+*/
+
 /********************************************MAIN ELEMENTS********************************************/
 //HTML Tags
 header{
@@ -29,7 +37,50 @@ h3{
 p{
     margin: 0;
     padding: 0;
-    @include set_text('Hind Madurai', 600, 1em, $white);
+    @include set_text('Hind Madurai', 600, 1em, $dark_blue);
+}
+
+footer{
+    margin: 0;
+    padding: 0;
+
+    ul{
+        display: flex;
+        margin: .7em 0;
+        padding: 0;
+        justify-content: center;
+
+        @include respond-to($large-desktop){
+            margin: 2em 0;
+            justify-content: left;
+        }
+
+        li{
+            display: inline;
+            margin: 0;
+            padding: 0 .7em;
+            
+            a{
+                display: inline-block;
+                color: $white;
+                font-size: 2em;
+            }
+        }
+    }
+
+    p{
+        margin: 0;
+        padding: .2em 0 2em 0;
+        text-align: center;
+        line-height: 2em;
+        @include set_text('Poppins', 500, .7em, $white);
+
+        @include respond-to($large-desktop){
+            padding: 2em 0;
+            text-align: right;
+            @include set_text('Poppins', 500, .9em, $white);
+        }
+    }
 }
 
 //Classes
@@ -75,36 +126,47 @@ p{
         background: $light-blue;
         position: absolute;
         top: 3.45em;
-        left: -150%;
-        border-start-end-radius: .9em;
+        right: -150%;
+        border-top-left-radius: .9em;
         transition: .5s;
 
         @include respond-to($large-desktop) {
             margin: 0;
             padding: 0;
-            width: 50%;
+            width: 100%;
             height: auto;
             background: none;
-            //position: absolute;
-            top: 0em;
-            left: 0;
+            position: unset;
+            top: unset;
+            right: unset;
             transition: 0s;
-            float: right;
         }
 
         li{
-            padding: 1em 0 1em 8em;
+            padding: 1em 0 1em 2em;
+            list-style: none;
 
-            @include set_text('Poppins', 500, .7em, $white);
             @include respond-to($large-desktop) {
                 display: inline;
+                padding: .3em 1em;
+                float: right;
             }
 
             a{
-                color: $white;
                 text-decoration: none;
+                display: block;
+                @include set_text('Poppins', 500, 1.5em, $white);
+
                 @include respond-to($large-desktop) {
                     display: inline-block;
+                    //color: $light-blue;
+                    @include set_text('Poppins', 500, 1.2em, $light-blue);
+                }
+
+                span{
+                    margin: 0;
+                    padding: .5em;
+                    font-size: .9em;
                 }
             }
         }
@@ -112,18 +174,23 @@ p{
 }
 
 /*.subcategories{
+    display: block;
     margin: 0;
-    padding: 1em;
-    display: block;
-    background: $light-blue;
-}
+    padding: 0;
 
-.sub_item{
-    display: block;
-}
+    @include respond-to($large-desktop){
+        display: block;
+    }
 
-.sub_link{
+    ul{
 
+        li{
+
+            a{
+
+            }
+        }
+    }
 }*/
 
 .mobile_menu_icon{
@@ -151,9 +218,7 @@ p{
 }
 
 #nav_options:checked ~ ul{
-    @include respond-to($phone) {
-        left: -2.5em;
-    }
+    right: -2.5em;
 }
 
 
