@@ -6,12 +6,30 @@ Poppins bold: 700
 Hind Madurai regular: 400
 */
 /********************************************MAIN ELEMENTS********************************************/
+body {
+  padding: 4.5em 0 0 0;
+}
+
 header {
   width: 100%;
 }
 
+.after::after {
+  content: "";
+  display: block;
+  width: 1.9em;
+  padding-top: 0.25em;
+  border-bottom: 0.2em solid #F9AC1C;
+  border-radius: 0.1em;
+}
+@media only screen and (min-width: 1200px) {
+  .after::after {
+    margin: auto;
+  }
+}
+
 h1 {
-  margin: 0;
+  margin: 0.5em 0 1em 0;
   padding: 0;
   font-family: "Poppins";
   font-weight: 700;
@@ -20,12 +38,17 @@ h1 {
 }
 
 h2 {
-  margin: 0;
+  margin: 1em 0 1em 0;
   padding: 0;
   font-family: "Poppins";
   font-weight: 600;
   font-size: 1.5em;
   color: #26374C;
+}
+@media only screen and (min-width: 1200px) {
+  h2 {
+    text-align: center;
+  }
 }
 
 h3 {
@@ -103,6 +126,10 @@ footer p {
   padding: 0;
 }
 
+.min_height_container {
+  min-height: calc(100vh - 11em);
+}
+
 .row {
   width: 100%;
   margin: 0;
@@ -113,28 +140,29 @@ footer p {
   background: #26374C;
 }
 
-.initial_space {
-  margin: 0;
-  padding: 4.5em 0 1em 0;
-}
-
 .logo {
   margin: auto;
   padding: 0.1em;
   width: 2.5em;
   height: 2.5em;
   color: #F3F7F6;
+  float: right;
 }
 
 .top_nav {
   width: 100%;
   padding: 0.5em;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
+}
+@media only screen and (min-width: 1200px) {
+  .top_nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 .top_nav ul {
   margin: 0;
@@ -143,7 +171,7 @@ footer p {
   height: 100vh;
   background: #00A7E1;
   position: absolute;
-  top: 3.45em;
+  top: 0;
   right: -150%;
   border-top-left-radius: 0.9em;
   -webkit-transition: 0.5s;
@@ -153,10 +181,10 @@ footer p {
   .top_nav ul {
     margin: 0;
     padding: 0;
-    width: 100%;
+    width: 89%;
     height: auto;
     background: none;
-    position: unset;
+    position: absolute;
     top: unset;
     right: unset;
     -webkit-transition: 0s;
@@ -164,27 +192,50 @@ footer p {
   }
 }
 .top_nav ul li {
-  padding: 1em 0 1em 2em;
+  padding: 0.6em 0 0.6em 2em;
   list-style: none;
 }
 @media only screen and (min-width: 1200px) {
   .top_nav ul li {
-    display: inline;
+    display: inline-block;
+    position: relative;
     padding: 0.3em 1em;
     float: right;
   }
+}
+.top_nav ul li:hover .children {
+  display: block;
+  margin: 0;
+  padding: 1em;
+  position: absolute;
+  background: #00A7E1;
+  border-radius: 0.5em;
+}
+.top_nav ul li:hover .children li {
+  display: block;
+  margin: 0.3em auto;
+  padding: 0;
+  width: 100%;
+}
+.top_nav ul li:hover .children li a {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 1em;
+  color: #F3F7F6;
+}
+.top_nav ul li:hover .children li a:hover {
+  color: #26374C;
 }
 .top_nav ul li a {
   text-decoration: none;
   display: block;
   font-family: "Poppins";
-  font-weight: 500;
-  font-size: 1.5em;
+  font-weight: 700;
+  font-size: 1.2em;
   color: #F3F7F6;
 }
 @media only screen and (min-width: 1200px) {
   .top_nav ul li a {
-    display: inline-block;
     font-family: "Poppins";
     font-weight: 500;
     font-size: 1.2em;
@@ -196,29 +247,33 @@ footer p {
   padding: 0.5em;
   font-size: 0.9em;
 }
+.top_nav ul .children {
+  right: 0%;
+  height: unset;
+  position: unset;
+  background: none;
+}
+.top_nav ul .children li {
+  margin: 0;
+  padding: 0.4em 2em;
+}
+.top_nav ul .children li a {
+  font-size: 1.1em;
+  font-weight: 500;
+}
 
-/*.subcategories{
-    display: block;
-    margin: 0;
-    padding: 0;
+.children {
+  display: block;
+}
+@media only screen and (min-width: 1200px) {
+  .children {
+    display: none;
+  }
+}
 
-    @include respond-to($large-desktop){
-        display: block;
-    }
-
-    ul{
-
-        li{
-
-            a{
-
-            }
-        }
-    }
-}*/
 .mobile_menu_icon {
   margin: 0;
-  padding: 0.4em 0 0.6em 0;
+  padding: 0.4em 0 2.7em 0;
   width: 1.8em;
   height: 1.8em;
   float: left;
@@ -242,7 +297,118 @@ footer p {
 }
 
 #nav_options:checked ~ ul {
-  right: -2.5em;
+  right: -6.5em;
+}
+@media only screen and (max-width: 767px) {
+  #nav_options:checked ~ ul {
+    right: -7.5em;
+  }
 }
 
 /*****************************************SECONDARY ELEMENTS*****************************************/
+.search_bar {
+  display: block;
+  margin: auto;
+  padding: 0;
+  width: 100%;
+  position: relative;
+}
+.search_bar form input {
+  margin: 0;
+  padding: 0.5em;
+  width: 85%;
+  background: #C4CCD7;
+  border: none;
+  border-top-left-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 1em;
+  color: #26374C;
+}
+.search_bar form input::-webkit-input-placeholder {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 1em;
+  color: #26374C;
+}
+.search_bar form input::-moz-placeholder {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 1em;
+  color: #26374C;
+}
+.search_bar form input:-ms-input-placeholder {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 1em;
+  color: #26374C;
+}
+.search_bar form input::-ms-input-placeholder {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 1em;
+  color: #26374C;
+}
+.search_bar form input::placeholder {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 1em;
+  color: #26374C;
+}
+.search_bar form button {
+  margin: 0 0 0 0.1em;
+  padding: 0.5em;
+  border: none;
+  background: #C4CCD7;
+  border-top-right-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+  position: absolute;
+}
+.search_bar form button i {
+  color: #26374C;
+  font-size: 1em;
+}
+
+.premiere_section {
+  margin: 0.7em 0;
+  padding: 0;
+  width: 100%;
+  border-radius: 0.5em;
+}
+.premiere_section img {
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+}
+.premiere_section div a {
+  display: block;
+  margin: auto;
+  padding: 0.5em 1em;
+  background: #00A7E1;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 0.5em;
+  font-family: "Hind Madurai";
+  font-weight: 400;
+  font-size: 1.2em;
+  color: #F3F7F6;
+}
+
+.carousel_img {
+  height: 11em;
+  border-radius: 0.5em;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+@media only screen and (min-width: 1200px) {
+  .carousel_img {
+    height: 36em;
+  }
+}
+
+.carousel {
+  margin: 2em 0 1em 0;
+  border-radius: 0.5em;
+}
