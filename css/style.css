@@ -29,7 +29,7 @@ header {
 }
 
 h1 {
-  margin: 0.5em 0 1em 0;
+  margin: 0.5em 0 0.7em 0;
   padding: 0;
   font-family: "Poppins";
   font-weight: 700;
@@ -38,7 +38,7 @@ h1 {
 }
 
 h2 {
-  margin: 1em 0 1em 0;
+  margin: 1.2em 0 1em 0;
   padding: 0;
   font-family: "Poppins";
   font-weight: 600;
@@ -56,7 +56,7 @@ h3 {
   padding: 0;
   font-family: "Poppins";
   font-weight: 500;
-  font-size: 0.7em;
+  font-size: 1.4em;
   color: #26374C;
 }
 
@@ -126,14 +126,20 @@ footer p {
   padding: 0;
 }
 
-.min_height_container {
-  min-height: calc(100vh - 11em);
-}
-
 .row {
   width: 100%;
   margin: 0;
   padding: 0;
+}
+
+.min_height_container {
+  min-height: calc(100vh - 11em);
+}
+
+@media only screen and (min-width: 1200px) {
+  .middle_h1 {
+    text-align: center;
+  }
 }
 
 .dark_blue {
@@ -164,7 +170,18 @@ footer p {
             justify-content: space-between;
   }
 }
-.top_nav ul {
+.top_nav div {
+  margin: 0;
+  padding: 0;
+}
+@media only screen and (min-width: 1200px) {
+  .top_nav div {
+    float: right;
+    width: 50%;
+    display: block;
+  }
+}
+.top_nav div ul {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -178,10 +195,10 @@ footer p {
   transition: 0.5s;
 }
 @media only screen and (min-width: 1200px) {
-  .top_nav ul {
+  .top_nav div ul {
     margin: 0;
     padding: 0;
-    width: 89%;
+    width: 65%;
     height: auto;
     background: none;
     position: absolute;
@@ -191,19 +208,18 @@ footer p {
     transition: 0s;
   }
 }
-.top_nav ul li {
+.top_nav div ul li {
   padding: 0.6em 0 0.6em 2em;
   list-style: none;
 }
 @media only screen and (min-width: 1200px) {
-  .top_nav ul li {
+  .top_nav div ul li {
     display: inline-block;
     position: relative;
     padding: 0.3em 1em;
-    float: right;
   }
 }
-.top_nav ul li:hover .children {
+.top_nav div ul li:hover .children {
   display: block;
   margin: 0;
   padding: 1em;
@@ -211,22 +227,27 @@ footer p {
   background: #00A7E1;
   border-radius: 0.5em;
 }
-.top_nav ul li:hover .children li {
+@media only screen and (min-width: 1200px) {
+  .top_nav div ul li:hover .children {
+    width: 100%;
+  }
+}
+.top_nav div ul li:hover .children li {
   display: block;
   margin: 0.3em auto;
   padding: 0;
   width: 100%;
 }
-.top_nav ul li:hover .children li a {
+.top_nav div ul li:hover .children li a {
   font-family: "Poppins";
   font-weight: 500;
   font-size: 1em;
   color: #F3F7F6;
 }
-.top_nav ul li:hover .children li a:hover {
+.top_nav div ul li:hover .children li a:hover {
   color: #26374C;
 }
-.top_nav ul li a {
+.top_nav div ul li a {
   text-decoration: none;
   display: block;
   font-family: "Poppins";
@@ -235,29 +256,29 @@ footer p {
   color: #F3F7F6;
 }
 @media only screen and (min-width: 1200px) {
-  .top_nav ul li a {
+  .top_nav div ul li a {
     font-family: "Poppins";
     font-weight: 500;
     font-size: 1.2em;
     color: #00A7E1;
   }
 }
-.top_nav ul li a span {
+.top_nav div ul li a span {
   margin: 0;
   padding: 0.5em;
   font-size: 0.9em;
 }
-.top_nav ul .children {
+.top_nav div ul .children {
   right: 0%;
   height: unset;
   position: unset;
   background: none;
 }
-.top_nav ul .children li {
+.top_nav div ul .children li {
   margin: 0;
   padding: 0.4em 2em;
 }
-.top_nav ul .children li a {
+.top_nav div ul .children li a {
   font-size: 1.1em;
   font-weight: 500;
 }
@@ -296,11 +317,11 @@ footer p {
   display: none;
 }
 
-#nav_options:checked ~ ul {
+#nav_options:checked ~ div ul {
   right: -6.5em;
 }
 @media only screen and (max-width: 767px) {
-  #nav_options:checked ~ ul {
+  #nav_options:checked ~ div ul {
     right: -7.5em;
   }
 }
@@ -316,7 +337,7 @@ footer p {
 .search_bar form input {
   margin: 0;
   padding: 0.5em;
-  width: 85%;
+  width: 88%;
   background: #C4CCD7;
   border: none;
   border-top-left-radius: 0.5em;
@@ -356,6 +377,11 @@ footer p {
   font-size: 1em;
   color: #26374C;
 }
+@media only screen and (min-width: 1200px) {
+  .search_bar form input {
+    width: 88%;
+  }
+}
 .search_bar form button {
   margin: 0 0 0 0.1em;
   padding: 0.5em;
@@ -375,10 +401,9 @@ footer p {
   padding: 0;
   width: 100%;
   border-radius: 0.5em;
-}
-.premiere_section img {
-  border-top-left-radius: 0.5em;
-  border-top-right-radius: 0.5em;
+  background: #DFE3E8;
+  border: none;
+  overflow: hidden;
 }
 .premiere_section div a {
   display: block;
@@ -395,7 +420,7 @@ footer p {
 }
 
 .carousel_img {
-  height: 11em;
+  height: 12em;
   border-radius: 0.5em;
   -o-object-fit: cover;
      object-fit: cover;
@@ -404,11 +429,141 @@ footer p {
 }
 @media only screen and (min-width: 1200px) {
   .carousel_img {
-    height: 36em;
+    height: 25em;
   }
 }
 
 .carousel {
   margin: 2em 0 1em 0;
   border-radius: 0.5em;
+}
+
+@media only screen and (min-width: 1200px) {
+  .category_title {
+    margin: 1em 0 1em 0;
+    padding: 0;
+    text-align: center;
+  }
+}
+
+.category_card {
+  margin: 0.7em 0;
+  padding: 0;
+  width: 100%;
+  border-radius: 0.5em;
+  background: #DFE3E8;
+  border: none;
+  overflow: hidden;
+}
+.category_card h2 {
+  margin: 0.5em 0 1em 0;
+}
+@media only screen and (min-width: 1200px) {
+  .category_card h2 {
+    text-align: left;
+    margin: 0 0 0.5em 0;
+  }
+}
+.category_card h3 {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: right;
+}
+.category_card p {
+  margin: 0.5em 0;
+  padding: 0.3em 0;
+  font-family: "Hind Madurai";
+  font-weight: 400;
+  font-size: 1.2em;
+  color: #26374C;
+}
+.category_card a {
+  display: block;
+  margin: 0;
+  padding: 0.5em 2em;
+  background: #00A7E1;
+  border-radius: 0.5em;
+  float: right;
+}
+.category_card a i {
+  color: #F3F7F6;
+  font-size: 1.5em;
+}
+
+.pay_contact {
+  margin: 0;
+}
+.pay_contact Label {
+  margin: 0.5em 0;
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 1em;
+  color: #26374C;
+}
+.pay_contact input {
+  display: block;
+  margin: 0 0 0.5em 0;
+  padding: 0.5em;
+  width: 100%;
+  border: none;
+  border-radius: 0.5em;
+  background: #DFE3E8;
+  font-family: "Hind Madurai";
+  font-weight: 400;
+  font-size: 1em;
+  color: #26374C;
+}
+.pay_contact input::-webkit-input-placeholder {
+  margin: 0;
+  padding: 0;
+  font-family: "Hind Madurai";
+  font-weight: 400;
+  font-size: 1em;
+  color: #a3aab3;
+}
+.pay_contact input::-moz-placeholder {
+  margin: 0;
+  padding: 0;
+  font-family: "Hind Madurai";
+  font-weight: 400;
+  font-size: 1em;
+  color: #a3aab3;
+}
+.pay_contact input:-ms-input-placeholder {
+  margin: 0;
+  padding: 0;
+  font-family: "Hind Madurai";
+  font-weight: 400;
+  font-size: 1em;
+  color: #a3aab3;
+}
+.pay_contact input::-ms-input-placeholder {
+  margin: 0;
+  padding: 0;
+  font-family: "Hind Madurai";
+  font-weight: 400;
+  font-size: 1em;
+  color: #a3aab3;
+}
+.pay_contact input::placeholder {
+  margin: 0;
+  padding: 0;
+  font-family: "Hind Madurai";
+  font-weight: 400;
+  font-size: 1em;
+  color: #a3aab3;
+}
+.pay_contact button {
+  display: block;
+  margin: 1.5em auto 3em auto;
+  padding: 0.5em;
+  width: 50%;
+  border: none;
+  border-radius: 0.5em;
+  background: #00A7E1;
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: 1em;
+  color: #F3F7F6;
 }

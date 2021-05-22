@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Helium Store</title>
+    <title>Categorías</title>
     <!--Bootstrap version-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -17,7 +17,7 @@
     <!--Font awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <!--Main stylesheet-->
-    <link href="./css/style.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
 
 </head>
 
@@ -30,11 +30,11 @@
             <div class="col-sm-8">
                 <div class="row">
                     <nav class="top_nav">
-                        <a href="./index.html"><img class="logo" src="./img/svg/logo.svg"
+                        <a href="../index.html"><img class="logo" src="../img/svg/logo.svg"
                                 alt="Logo de Helium Store"></a>
                         <input type="checkbox" id="nav_options">
                         <label class="mobile_menu_icon" for="nav_options">
-                            <img src="./img/svg/mobile_menu.svg" alt="Opciones de navegacion">
+                            <img src="../img/svg/mobile_menu.svg" alt="Opciones de navegacion">
                         </label>
                         <div>
                             <ul>
@@ -68,15 +68,7 @@
                 <div class="col-sm-8">
                     <div class="row">
                         <div class="col-sm">
-                            <h1>Entretenimiento para todos los gustos</h1>
-                        </div>
-                        <div class="col-sm search_bar">
-                            <form action="">
-                                <label for="searchBar"></label>
-                                <input placeholder="Buscar" name="search"
-                                    title="Ingrese una palabra clave para empezar a buscar" type="text" id="searchBar">
-                                <button type="submit"><i class="fas fa-search"></i></button>
-                            </form>
+                            <h1 class="category_title after">Conciertos</h1>
                         </div>
                     </div>
                 </div>
@@ -85,91 +77,86 @@
             <div class="row justify-content-center">
                 <div class="col-sm-8">
                     <div class="row">
-                        <div class="col-sm">
-                            <!--Start Carousel-->
 
-                            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <img src="./img/concierto01.jpg" class="d-block w-100 carousel_img"
-                                            alt="Concierto de Rock">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="./img/concierto02.jpg" class="d-block w-100 carousel_img"
-                                            alt="Concierto guitarras acústicas">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="./img/concierto03.jpg" class="d-block w-100 carousel_img"
-                                            alt="Concierto de Pop">
-                                    </div>
-                                </div>
-                                <button class="carousel-control-prev" type="button"
-                                    data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button"
-                                    data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button>
-                            </div>
-
-                            <!--End Carousel-->
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row justify-content-center">
-                <div class="col-sm-8">
-                    <div class="row">
-                        <h2 class="after">Estrenos</h2>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row justify-content-center">
-                <div class="col-sm-8">
-                    <div class="row">
-
-                        <div class="col-sm-4">
+                        <!--<div class="col-sm-4">
                             <div class="card premiere_section">
-                                <img src="./img/concierto03.jpg" class="card-img-top" alt="...">
+                                <img src="../img/concierto03.jpg" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <a href="#" class="">Leer más</a>
                                 </div>
                             </div>
+                        </div>-->
+
+                        <div class="col-sm-4">
+
+                            <div class="card category_card">
+                                <img src="../img/concierto01.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h2 class="card-title">Lorem ipsum dolor sit amet.</h2>
+
+                                    <h3 class="card-text">Gratis</h3>
+
+                                    <p class="card-text">Lugar <br /> 17/05/21 - 1:00 p.m. <br /> Categoría</p>
+
+                                    <a href="#" class=""><i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+
                         </div>
 
                         <div class="col-sm-4">
-                            <div class="card premiere_section">
-                                <img src="./img/concierto03.jpg" class="card-img-top" alt="...">
+
+                            <div class="card category_card">
+                                <img src="../img/concierto01.jpg" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <a href="#" class="">Leer más</a>
+                                    <h2 class="card-title">Lorem ipsum dolor sit amet.</h2>
+
+                                    <h3 class="card-text">Gratis</h3>
+
+                                    <p class="card-text">Lugar <br /> 17/05/21 - 1:00 p.m. <br /> Categoría</p>
+
+                                    <a href="#" class=""><i class="fas fa-arrow-right"></i></a>
                                 </div>
                             </div>
+
                         </div>
 
                         <div class="col-sm-4">
-                            <div class="card premiere_section">
-                                <img src="./img/concierto03.jpg" class="card-img-top" alt="...">
+
+                            <div class="card category_card">
+                                <img src="../img/concierto01.jpg" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <a href="#" class="">Leer más</a>
+                                    <h2 class="card-title">Lorem ipsum dolor sit amet.</h2>
+
+                                    <h3 class="card-text">Gratis</h3>
+
+                                    <p class="card-text">Lugar <br /> 17/05/21 - 1:00 p.m. <br /> Categoría</p>
+
+                                    <a href="#" class=""><i class="fas fa-arrow-right"></i></a>
                                 </div>
                             </div>
+
                         </div>
 
                         <div class="col-sm-4">
-                            <div class="card premiere_section">
-                                <img src="./img/concierto03.jpg" class="card-img-top" alt="...">
+
+                            <div class="card category_card">
+                                <img src="../img/concierto01.jpg" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <a href="#" class="">Leer más</a>
+                                    <h2 class="card-title">Lorem ipsum dolor sit amet.</h2>
+
+                                    <h3 class="card-text">Gratis</h3>
+
+                                    <p class="card-text">Lugar <br /> 17/05/21 - 1:00 p.m. <br /> Categoría</p>
+
+                                    <a href="#" class=""><i class="fas fa-arrow-right"></i></a>
                                 </div>
                             </div>
+
                         </div>
 
                     </div>
+
                 </div>
             </div>
 
@@ -196,12 +183,6 @@
             </div>
         </footer>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
-        integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous">
-        </script>
-
-    <!--<script src="./js/main.js"></script>-->
 
 </body>
 

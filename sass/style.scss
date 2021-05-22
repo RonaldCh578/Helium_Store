@@ -37,13 +37,13 @@ header{
 }
 
 h1{
-    margin: .5em 0 1em 0;
+    margin: .5em 0 .7em 0;
     padding: 0;
     @include set_text('Poppins', 700, 1.6em, $dark_blue);
 }
 
 h2{
-    margin: 1em 0 1em 0;
+    margin: 1.2em 0 1em 0;
     padding: 0;
 
     @include set_text('Poppins', 600, 1.5em, $dark_blue);
@@ -56,7 +56,7 @@ h2{
 h3{
     margin: 0;
     padding: 0;
-    @include set_text('Poppins', 500, .7em, $dark_blue);
+    @include set_text('Poppins', 500, 1.4em, $dark_blue);
 }
 
 p{
@@ -113,14 +113,20 @@ footer{
     padding: 0;
 }
 
-.min_height_container{
-    min-height: calc(100vh - 11em);
-}
-
 .row{
     width: 100%;
     margin: 0;
     padding: 0;
+}
+
+.min_height_container{
+    min-height: calc(100vh - 11em);
+}
+
+.middle_h1{
+    @include respond-to($large-desktop){
+        text-align: center;
+    }
 }
 
 .dark_blue{
@@ -146,99 +152,116 @@ footer{
         justify-content: space-between;
     }
 
-    ul{
+    div{
         margin: 0;
         padding: 0;
-        width: 100%;
-        height: 100vh;
-        background: $light-blue;
-        position: absolute;
-        top: 0;
-        right: -150%;
-        border-top-left-radius: .9em;
-        transition: .5s;
 
-        @include respond-to($large-desktop) {
-            margin: 0;
-            padding: 0;
-            width: 89%;
-            height: auto;
-            background: none;
-            position: absolute;
-            top: unset;
-            right: unset;
-            transition: 0s;
+        @include respond-to($large-desktop){
+            float: right;
+            width: 50%;
+            display: block;
         }
 
-        li{
-            padding: .6em 0 .6em 2em;
-            list-style: none;
-
+        ul{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100vh;
+            background: $light-blue;
+            position: absolute;
+            top: 0;
+            right: -150%;
+            border-top-left-radius: .9em;
+            transition: .5s;
+    
             @include respond-to($large-desktop) {
-                display: inline-block;
-                position: relative;
-                padding: .3em 1em;
-                float: right;
-            }
-
-            &:hover .children{
-                display: block;
                 margin: 0;
-                padding: 1em;
+                padding: 0;
+                width: 65%;
+                height: auto;
+                background: none;
                 position: absolute;
-                background: $light-blue;
-                border-radius: .5em;
-                
-                li{
+                top: unset;
+                right: unset;
+                transition: 0s;
+            }
+    
+            li{
+                padding: .6em 0 .6em 2em;
+                list-style: none;
+    
+                @include respond-to($large-desktop) {
+                    display: inline-block;
+                    position: relative;
+                    padding: .3em 1em;
+                    //float: right;
+                }
+    
+                &:hover .children{
                     display: block;
-                    margin: .3em auto;
-                    padding: 0;
-                    width: 100%;
-
-                    a{
-                        @include set_text('Poppins', 500, 1em, $white);
-
-                        &:hover{
-                            color: $dark_blue;
+                    margin: 0;
+                    padding: 1em;
+                    position: absolute;
+                    background: $light-blue;
+                    border-radius: .5em;
+    
+                    @include respond-to($large-desktop){
+                        width: 100%;
+                    }
+                    
+                    li{
+                        display: block;
+                        margin: .3em auto;
+                        padding: 0;
+                        width: 100%;
+    
+                        a{
+                            @include set_text('Poppins', 500, 1em, $white);
+    
+                            &:hover{
+                                color: $dark_blue;
+                            }
                         }
                     }
                 }
-            }
-
-            a{
-                text-decoration: none;
-                display: block;
-                @include set_text('Poppins', 700, 1.2em, $white);
-
-                @include respond-to($large-desktop) {
-                    @include set_text('Poppins', 500, 1.2em, $light-blue);
+    
+                a{
+                    text-decoration: none;
+                    display: block;
+                    @include set_text('Poppins', 700, 1.2em, $white);
+    
+                    @include respond-to($large-desktop) {
+                        @include set_text('Poppins', 500, 1.2em, $light-blue);
+                    }
+    
+                    span{
+                        margin: 0;
+                        padding: .5em;
+                        font-size: .9em;
+                    }
                 }
-
-                span{
-                    margin: 0;
-                    padding: .5em;
-                    font-size: .9em;
+            }
+        }
+    
+        ul .children{
+            right: 0%;
+            height: unset;
+            position: unset;
+            background: none;
+    
+            li{
+                margin: 0;
+                padding: .4em 2em;
+    
+                a{
+                    font-size: 1.1em;
+                    font-weight: 500;
                 }
             }
         }
     }
 
-    ul .children{
-        right: 0%;
-        height: unset;
-        position: unset;
-        background: none;
-
-        li{
-            margin: 0;
-            padding: .4em 2em;
-
-            a{
-                font-size: 1.1em;
-                font-weight: 500;
-            }
-        }
-    }
+    
 }
 
 .children{
@@ -273,7 +296,7 @@ footer{
     display: none;
 }
 
-#nav_options:checked ~ ul{
+#nav_options:checked ~ div ul{
     right: -6.5em;
 
     @include respond-to($tablet-portrait){
@@ -297,7 +320,7 @@ footer{
         input{
             margin: 0;
             padding: .5em;
-            width: 85%;
+            width: 88%;
             background: $gray;
             border: none;
             border-top-left-radius: .5em;
@@ -307,6 +330,10 @@ footer{
 
             &::placeholder{
                 @include set_text('Poppins', 600, 1em, $dark_blue);
+            }
+
+            @include respond-to($large-desktop){
+                width: 88%;
             }
         }
 
@@ -332,11 +359,9 @@ footer{
     padding: 0;
     width: 100%;
     border-radius: .5em;
-
-    img{
-        border-top-left-radius: .5em;
-        border-top-right-radius: .5em;
-    }
+    background: $light-gray;
+    border: none;
+    overflow: hidden;
 
     div{
         a{
@@ -354,13 +379,13 @@ footer{
 }
 
 .carousel_img{
-    height: 11em;
+    height: 12em;
     border-radius: .5em;
     object-fit: cover;
     object-position: center center;
 
     @include respond-to($large-desktop){
-        height: 36em;
+        height: 25em;
     }
 }
 
@@ -369,4 +394,97 @@ footer{
     border-radius: .5em;
 }
 
-//Detail Page
+//Category Page
+.category_title{
+    @include respond-to($large-desktop){
+        margin: 1em 0 1em 0;
+        padding: 0;
+        text-align: center;
+    }
+}
+
+.category_card{
+    margin: .7em 0;
+    padding: 0;
+    width: 100%;
+    border-radius: .5em;
+    background: $light-gray;
+    border: none;
+    overflow: hidden;
+
+    h2{
+        margin: .5em 0 1em 0;
+
+        @include respond-to($large-desktop){
+            text-align: left;
+            margin: 0 0 .5em 0;
+        }
+    }
+
+    h3{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        text-align: right;
+    }
+    
+    p{
+        margin: .5em 0;
+        padding: .3em 0;
+        @include set_text("Hind Madurai", 400, 1.2em, $dark_blue);
+    }
+
+    a{
+        display: block;
+        margin: 0;
+        padding: .5em 2em;
+        background: $light-blue;
+        border-radius: .5em;
+        float: right;
+
+        i{
+            color: $white;
+            font-size: 1.5em;
+        }
+    }
+}
+
+//Pay and contact info
+.pay_contact{
+    margin: 0;
+
+    Label{
+        margin: .5em 0;
+        @include set_text('Poppins', 500, 1em, $dark_blue);
+    }
+
+    input{
+        display: block;
+        margin: 0 0 .5em 0;
+        padding: .5em;
+        width: 100%;
+        border: none;
+        border-radius: .5em;
+        background: $light-gray;
+
+        @include set_text('Hind Madurai', 400, 1em, $dark_blue);
+
+        &::placeholder{
+            margin: 0;
+            padding: 0;
+            @include set_text('Hind Madurai', 400, 1em, #a3aab3);
+        }
+    }
+
+    button{
+        display: block;
+        margin: 1.5em auto 3em auto;
+        padding: .5em;
+        width: 50%;
+        border: none;
+        border-radius: .5em;
+        background: $light-blue;
+        
+        @include set_text('Poppins', 700, 1em, $white);
+    }
+}
