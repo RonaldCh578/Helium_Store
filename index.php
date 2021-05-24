@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is an store to buy tickets for many different events">
     <title>Helium Store</title>
     <!--Bootstrap version-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -30,8 +31,7 @@
             <div class="col-sm-8">
                 <div class="row">
                     <nav class="top_nav">
-                        <a href="./index.php"><img class="logo" src="./img/svg/logo.svg"
-                                alt="Logo de Helium Store"></a>
+                        <a href="./index.php"><img class="logo" src="./img/svg/logo.svg" alt="Logo de Helium Store"></a>
                         <input type="checkbox" id="nav_options">
                         <label class="mobile_menu_icon" for="nav_options">
                             <img src="./img/svg/mobile_menu.svg" alt="Opciones de navegacion">
@@ -75,7 +75,7 @@
                                 <label for="searchBar"></label>
                                 <input placeholder="Buscar" name="search"
                                     title="Ingrese una palabra clave para empezar a buscar" type="text" id="searchBar">
-                                <button type="submit"><i class="fas fa-search"></i></button>
+                                <button type="submit" aria-label="search button"><i class="fas fa-search"></i></button>
                             </form>
                         </div>
                     </div>
@@ -182,10 +182,10 @@
                     <div class="col-sm">
                         <nav>
                             <ul>
-                                <li><a href=""><i class="fab fa-facebook-square"></i></a></li>
-                                <li><a href=""><i class="fab fa-instagram"></i></a></li>
-                                <li><a href=""><i class="fab fa-linkedin"></i></a></li>
-                                <li><a href=""><i class="fab fa-youtube"></i></a></li>
+                                <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
                             </ul>
                         </nav>
                     </div>

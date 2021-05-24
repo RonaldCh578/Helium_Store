@@ -488,3 +488,90 @@ footer{
         @include set_text('Poppins', 700, 1em, $white);
     }
 }
+
+
+//Shop info page
+.shop_info{
+    h2{
+        @include respond-to($large-desktop){
+            text-align: left;
+        }
+    }
+
+    p{
+        margin: 0;
+        padding: .5em 0;
+        width: 100%;
+
+        @include set_text('Hind Madurai', 400, 1.1em, $dark_blue);
+    }
+    
+    span{
+        display: block;
+        margin: 0;
+        padding: .5em 0;
+
+        button{
+            display: inline-block;
+            margin: 0;
+            padding: .3em .5em;
+            background: $gray;
+            border: none;
+        }
+
+        input{
+            margin: 0;
+            padding: .19em 0;
+            width: 20%;
+            border: none;
+            background: $light-gray;
+            text-align: center;
+
+            @include set_text('Hind Madurai', 400, 1.2em, #a3aab3);
+
+            @include respond-to($large-desktop){
+                width: 10%;
+            }
+        }
+
+        i{
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: $dark_blue;
+            font-size: .6em;
+        }
+    }
+
+    button{
+        display: block;
+        margin: 1em auto 3em auto;
+        padding: .5em 1.6em;
+        border: none;
+        border-radius: .5em;
+        background: $light-blue;
+
+        @include set_text('Poppins', 700, 1.1em, $white);
+    }
+}
+
+.shop_detail{
+    display: block;
+    margin: .5em auto .5em auto;
+    padding: .5em;
+    width: 100%;
+    background: $light-gray;
+    border-radius: .5em;
+
+    @include respond-to($large-desktop){
+        margin: .5em auto 2em auto;
+    }
+}
+
+.subtitle_shop_info{
+    display: block;
+    margin: 0;
+    padding: .5em 0;
+    
+    @include set_text('Poppins', 600, 1em, $dark_blue);
+}

@@ -567,3 +567,90 @@ footer p {
   font-size: 1em;
   color: #F3F7F6;
 }
+
+@media only screen and (min-width: 1200px) {
+  .shop_info h2 {
+    text-align: left;
+  }
+}
+.shop_info p {
+  margin: 0;
+  padding: 0.5em 0;
+  width: 100%;
+  font-family: "Hind Madurai";
+  font-weight: 400;
+  font-size: 1.1em;
+  color: #26374C;
+}
+.shop_info span {
+  display: block;
+  margin: 0;
+  padding: 0.5em 0;
+}
+.shop_info span button {
+  display: inline-block;
+  margin: 0;
+  padding: 0.3em 0.5em;
+  background: #C4CCD7;
+  border: none;
+}
+.shop_info span input {
+  margin: 0;
+  padding: 0.19em 0;
+  width: 20%;
+  border: none;
+  background: #DFE3E8;
+  text-align: center;
+  font-family: "Hind Madurai";
+  font-weight: 400;
+  font-size: 1.2em;
+  color: #a3aab3;
+}
+@media only screen and (min-width: 1200px) {
+  .shop_info span input {
+    width: 10%;
+  }
+}
+.shop_info span i {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #26374C;
+  font-size: 0.6em;
+}
+.shop_info button {
+  display: block;
+  margin: 1em auto 3em auto;
+  padding: 0.5em 1.6em;
+  border: none;
+  border-radius: 0.5em;
+  background: #00A7E1;
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: 1.1em;
+  color: #F3F7F6;
+}
+
+.shop_detail {
+  display: block;
+  margin: 0.5em auto 0.5em auto;
+  padding: 0.5em;
+  width: 100%;
+  background: #DFE3E8;
+  border-radius: 0.5em;
+}
+@media only screen and (min-width: 1200px) {
+  .shop_detail {
+    margin: 0.5em auto 2em auto;
+  }
+}
+
+.subtitle_shop_info {
+  display: block;
+  margin: 0;
+  padding: 0.5em 0;
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 1em;
+  color: #26374C;
+}

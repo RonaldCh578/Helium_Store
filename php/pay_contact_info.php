@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This part you have to put your personal information shop the tickets">
     <title>Categorías</title>
     <!--Bootstrap version-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -144,10 +145,10 @@
                     <div class="col-sm">
                         <nav>
                             <ul>
-                                <li><a href=""><i class="fab fa-facebook-square"></i></a></li>
-                                <li><a href=""><i class="fab fa-instagram"></i></a></li>
-                                <li><a href=""><i class="fab fa-linkedin"></i></a></li>
-                                <li><a href=""><i class="fab fa-youtube"></i></a></li>
+                                <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
                             </ul>
                         </nav>
                     </div>

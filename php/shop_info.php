@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Page for category">
+    <meta name="description" content="Here you have to specify the amount of fields you want to buy">
     <title>Categorías</title>
     <!--Bootstrap version-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -69,7 +69,7 @@
                 <div class="col-sm-8">
                     <div class="row">
                         <div class="col-sm">
-                            <h1 class="category_title after">Conciertos</h1>
+                            <h1 class="middle_h1 after">Compra de entradas</h1>
                         </div>
                     </div>
                 </div>
@@ -78,76 +78,73 @@
             <div class="row justify-content-center">
                 <div class="col-sm-8">
                     <div class="row">
-
-                        <div class="col-sm-4">
-
-                            <div class="card category_card">
-                                <img src="../img/concierto01.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h2 class="card-title">Lorem ipsum dolor sit amet.</h2>
-
-                                    <h3 class="card-text">Gratis</h3>
-
-                                    <p class="card-text">Lugar <br /> 17/05/21 - 1:00 p.m. <br /> Categoría</p>
-
-                                    <a href="#" class=""><i class="fas fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-
+                        <div class="col-sm">
+                            <p class="subtitle_shop_info">Campos disponibles: 19</p>
                         </div>
-
-                        <div class="col-sm-4">
-
-                            <div class="card category_card">
-                                <img src="../img/concierto01.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h2 class="card-title">Lorem ipsum dolor sit amet.</h2>
-
-                                    <h3 class="card-text">Gratis</h3>
-
-                                    <p class="card-text">Lugar <br /> 17/05/21 - 1:00 p.m. <br /> Categoría</p>
-
-                                    <a href="#" class=""><i class="fas fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="col-sm-4">
-
-                            <div class="card category_card">
-                                <img src="../img/concierto01.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h2 class="card-title">Lorem ipsum dolor sit amet.</h2>
-
-                                    <h3 class="card-text">Gratis</h3>
-
-                                    <p class="card-text">Lugar <br /> 17/05/21 - 1:00 p.m. <br /> Categoría</p>
-
-                                    <a href="#" class=""><i class="fas fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="col-sm-4">
-
-                            <div class="card category_card">
-                                <img src="../img/concierto01.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h2 class="card-title">Lorem ipsum dolor sit amet.</h2>
-
-                                    <h3 class="card-text">Gratis</h3>
-
-                                    <p class="card-text">Lugar <br /> 17/05/21 - 1:00 p.m. <br /> Categoría</p>
-
-                                    <a href="#" class=""><i class="fas fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-
-                        </div>
-
                     </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-sm-8 shop_info">
+                    <form action="">
+
+                        <div class="row">
+                            <div class="col-sm">
+
+                                <label class="subtitle_shop_info" for="qty_tickets_bought">Cantidad</label>
+                                <span>
+                                    <button aria-label="minus button" type="button"><i
+                                            class="fas fa-minus"></i></button>
+                                    <input name="qty_ticket" title="" id="qty_tickets_bought" value="0" min="0"
+                                        type="text">
+                                    <button aria-label="plus button" type="button"><i class="fas fa-plus"></i></button>
+                                </span>
+
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm">
+
+                                <h2>Detalle de compra</h2>
+                                <div class="shop_detail">
+
+                                    <div class="row">
+                                        <div class="col">
+                                            <p>Título</p>
+                                        </div>
+                                        <div class="col">
+                                            <p>Precio</p>
+                                        </div>
+                                        <div class="col">
+                                            <p>Subtotal</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col">
+                                            <p>2X adultos</p>
+                                        </div>
+                                        <div class="col">
+                                            <p>0</p>
+                                        </div>
+                                        <div class="col">
+                                            <p>0</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm">
+                                <button aria-label="continue button" type="submit">Continuar</button>
+                            </div>
+                        </div>
+
+                    </form>
 
                 </div>
             </div>
