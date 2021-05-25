@@ -161,10 +161,10 @@
                     <div class="col-sm">
                         <nav>
                             <ul>
-                                <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a></li>
+                                <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://cr.linkedin.com/"><i class="fab fa-linkedin"></i></a></li>
+                                <li><a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></li>
                             </ul>
                         </nav>
                     </div>

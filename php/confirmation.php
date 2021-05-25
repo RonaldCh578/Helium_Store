@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Here you have to specify the amount of fields you want to buy">
-    <title>Información de compra</title>
+    <meta name="description" content="Confirmation of your purchase">
+    <title>Confirmación de compra</title>
     <!--Bootstrap version-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -67,91 +67,40 @@
 
             <div class="row justify-content-center">
                 <div class="col-sm-8">
+
                     <div class="row">
                         <div class="col-sm">
-                            <h1 class="middle_h1 after">Compra de entradas</h1>
+                            <h1 class="middle_h1 after">Si compra se ha procesado con éxito</h1>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="row justify-content-center">
-                <div class="col-sm-8">
                     <div class="row">
                         <div class="col-sm">
-                            <p class="subtitle_shop_info">Campos disponibles: 19</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                            <h2>Resumen</h2>
+                            <div class="confirmation_detail">
 
-            <div class="row justify-content-center">
-                <div class="col-sm-8 shop_info">
-                    <form action="">
-
-                        <div class="row">
-                            <div class="col-sm">
-
-                                <label class="subtitle_shop_info" for="qty_tickets_bought">Cantidad</label>
-                                <span>
-                                    <button class="minus_border_radius" aria-label="minus button" type="button"><i
-                                            class="fas fa-minus"></i></button>
-                                    <input name="qty_ticket" title="" id="qty_tickets_bought" value="0" min="0"
-                                        type="text">
-                                    <button class="plus_border_radius" aria-label="plus button" type="button"><i class="fas fa-plus"></i></button>
-                                </span>
-
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-sm">
-
-                                <h2>Detalle de compra</h2>
-                                <div class="shop_detail">
-
-                                    <div class="row">
-                                        <div class="col">
-                                            <p>Título</p>
-                                        </div>
-                                        <div class="col">
-                                            <p>Precio</p>
-                                        </div>
-                                        <div class="col">
-                                            <p>Subtotal</p>
-                                        </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <p>2X Adultos</p>
                                     </div>
-
-                                    <div class="row">
-                                        <div class="col">
-                                            <p>2X adultos</p>
-                                        </div>
-                                        <div class="col">
-                                            <p>0</p>
-                                        </div>
-                                        <div class="col">
-                                            <p>0</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col">
-                                            <p class="total_shop_info">Total: ₡0</p>
-                                        </div>
+                                    <div class="col">
+                                        <p>₡0</p>
                                     </div>
                                 </div>
 
+                                <div class="row">
+                                    <div class="col">
+                                        <p>Total: ₡0</p>
+                                    </div>
+                                </div>
+                                
                             </div>
                         </div>
+                    </div>
 
-                        <div class="row">
-                            <div class="col-sm">
-                                <button id="btn_continue_shoping" aria-label="continue button" type="submit">Continuar</button>
-                            </div>
-                        </div>
-
-                    </form>
-
+                    <div class="row">
+                        <a class="btn_backHome_confirmation" href="../index.php">Volver a inicio</a>
+                    </div>
                 </div>
             </div>
 

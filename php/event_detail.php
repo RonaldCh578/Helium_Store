@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Here you have to specify the amount of fields you want to buy">
-    <title>Información de compra</title>
+    <meta name="description" content="Event detail">
+    <title>Detalle del evento</title>
     <!--Bootstrap version-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -65,92 +65,91 @@
         <!--Start Page Content-->
         <div class="min_height_container">
 
-            <div class="row justify-content-center">
-                <div class="col-sm-8">
-                    <div class="row">
-                        <div class="col-sm">
-                            <h1 class="middle_h1 after">Compra de entradas</h1>
-                        </div>
-                    </div>
+            <div class="event_back_cover">
+                <img src="../img/concierto03.jpg" alt="Contra portada de concierto de música Pop">
+                <div class="row align-items-center inner">
+                    <img src="../img/concierto02.jpg" alt="Portada de concierto de música Pop">
                 </div>
             </div>
 
             <div class="row justify-content-center">
                 <div class="col-sm-8">
+
                     <div class="row">
                         <div class="col-sm">
-                            <p class="subtitle_shop_info">Campos disponibles: 19</p>
+
+                            <h1 class="middle_h1 after">Título del evento</h1>
+                            <h2>Gratis</h2>
+                            <p>Lugar</p>
+                            <p>Categoría</p>
+                            <p>Todo público</p>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac est pharetra, vulputate
+                                lectus in, tincidunt libero. Pellentesque accumsan magna quis sapien maximus egestas. In
+                                volutpat rhoncus lectus vel tristique.</p>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="row justify-content-center">
-                <div class="col-sm-8 shop_info">
-                    <form action="">
+                    <div class="row">
 
-                        <div class="row">
-                            <div class="col-sm">
-
-                                <label class="subtitle_shop_info" for="qty_tickets_bought">Cantidad</label>
-                                <span>
-                                    <button class="minus_border_radius" aria-label="minus button" type="button"><i
-                                            class="fas fa-minus"></i></button>
-                                    <input name="qty_ticket" title="" id="qty_tickets_bought" value="0" min="0"
-                                        type="text">
-                                    <button class="plus_border_radius" aria-label="plus button" type="button"><i class="fas fa-plus"></i></button>
-                                </span>
-
-                            </div>
+                        <div class="col-sm">
+                            <select name="date" id="Select_date">
+                                <option value="17/05/21 - 1:00 pm" selected>Lunes 17 de mayo 1:00 p.m.</option>
+                                <option value="25/05/21 - 1:00 pm">Martes 25 de mayo 1:00 p.m.</option>
+                            </select>
                         </div>
 
-                        <div class="row">
-                            <div class="col-sm">
+                        <div class="col-sm">
+                            <a href="../php/shop_info.php">Registrarse</a>
+                        </div>
 
-                                <h2>Detalle de compra</h2>
-                                <div class="shop_detail">
+                    </div>
 
-                                    <div class="row">
-                                        <div class="col">
-                                            <p>Título</p>
-                                        </div>
-                                        <div class="col">
-                                            <p>Precio</p>
-                                        </div>
-                                        <div class="col">
-                                            <p>Subtotal</p>
-                                        </div>
-                                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            <h2 class="after">Eventos relacionados</h2>
+                        </div>
+                    </div>
 
-                                    <div class="row">
-                                        <div class="col">
-                                            <p>2X adultos</p>
-                                        </div>
-                                        <div class="col">
-                                            <p>0</p>
-                                        </div>
-                                        <div class="col">
-                                            <p>0</p>
-                                        </div>
-                                    </div>
+                    <div class="row">
 
-                                    <div class="row">
-                                        <div class="col">
-                                            <p class="total_shop_info">Total: ₡0</p>
-                                        </div>
-                                    </div>
+                        <div class="col-sm-4">
+                            <div class="card events_related">
+                                <img src="../img/concierto01.jpg" class="card-img-top" alt="Concierto 01">
+                                <div class="card-body">
+                                    <a href="#" class="">Leer más</a>
                                 </div>
-
                             </div>
                         </div>
 
-                        <div class="row">
-                            <div class="col-sm">
-                                <button id="btn_continue_shoping" aria-label="continue button" type="submit">Continuar</button>
+                        <div class="col-sm-4">
+                            <div class="card events_related">
+                                <img src="../img/concierto01.jpg" class="card-img-top" alt="Concierto 01">
+                                <div class="card-body">
+                                    <a href="#" class="">Leer más</a>
+                                </div>
                             </div>
                         </div>
 
-                    </form>
+                        <div class="col-sm-4">
+                            <div class="card events_related">
+                                <img src="../img/concierto01.jpg" class="card-img-top" alt="Concierto 01">
+                                <div class="card-body">
+                                    <a href="#" class="">Leer más</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="card events_related">
+                                <img src="../img/concierto01.jpg" class="card-img-top" alt="Concierto 01">
+                                <div class="card-body">
+                                    <a href="#" class="">Leer más</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
 
                 </div>
             </div>
