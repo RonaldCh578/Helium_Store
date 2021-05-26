@@ -41,7 +41,7 @@
                             <ul>
                                 <li><a href="../index.php">Inicio</a></li>
                                 <li>
-                                    <a href="./php/category.php">Categorías<span class="fas fa-caret-down"></span></a>
+                                    <a href="../php/category.php">Categorías<span class="fas fa-caret-down"></span></a>
                                     <ul class="children">
                                         <li><a href="#">Conciertos</a></li>
                                         <li><a href="#">Infantiles</a></li>
@@ -90,7 +90,7 @@
 
                                     <p class="card-text">Lugar <br /> 17/05/21 - 1:00 p.m. <br /> Categoría</p>
 
-                                    <a href="#" class=""><i class="fas fa-arrow-right"></i></a>
+                                    <a href="../php/event_detail.php" class=""><i class="fas fa-arrow-right"></i></a>
                                 </div>
                             </div>
 
@@ -107,7 +107,7 @@
 
                                     <p class="card-text">Lugar <br /> 17/05/21 - 1:00 p.m. <br /> Categoría</p>
 
-                                    <a href="#" class=""><i class="fas fa-arrow-right"></i></a>
+                                    <a href="../php/event_detail.php" class=""><i class="fas fa-arrow-right"></i></a>
                                 </div>
                             </div>
 
@@ -124,7 +124,7 @@
 
                                     <p class="card-text">Lugar <br /> 17/05/21 - 1:00 p.m. <br /> Categoría</p>
 
-                                    <a href="#" class=""><i class="fas fa-arrow-right"></i></a>
+                                    <a href="../php/event_detail.php" class=""><i class="fas fa-arrow-right"></i></a>
                                 </div>
                             </div>
 
@@ -141,7 +141,7 @@
 
                                     <p class="card-text">Lugar <br /> 17/05/21 - 1:00 p.m. <br /> Categoría</p>
 
-                                    <a href="#" class=""><i class="fas fa-arrow-right"></i></a>
+                                    <a href="../php/event_detail.php" class=""><i class="fas fa-arrow-right"></i></a>
                                 </div>
                             </div>
 

@@ -41,7 +41,7 @@
                             <ul>
                                 <li><a href="../index.php">Inicio</a></li>
                                 <li>
-                                    <a href="./php/category.php">Categorías<span class="fas fa-caret-down"></span></a>
+                                    <a href="../php/category.php">Categorías<span class="fas fa-caret-down"></span></a>
                                     <ul class="children">
                                         <li><a href="#">Conciertos</a></li>
                                         <li><a href="#">Infantiles</a></li>
@@ -87,7 +87,7 @@
 
             <div class="row justify-content-center">
                 <div class="col-sm-8 shop_info">
-                    <form action="">
+                    <form action="../php/shop_info.php">
 
                         <div class="row">
                             <div class="col-sm">

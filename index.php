@@ -137,7 +137,7 @@
                             <div class="card premiere_section">
                                 <img src="./img/concierto03.jpg" class="card-img-top" alt="Concierto 03">
                                 <div class="card-body">
-                                    <a href="#" class="">Leer más</a>
+                                    <a href="../php/event_detail.php">Leer más</a>
                                 </div>
                             </div>
                         </div>
@@ -146,7 +146,7 @@
                             <div class="card premiere_section">
                                 <img src="./img/concierto03.jpg" class="card-img-top" alt="Concierto 03">
                                 <div class="card-body">
-                                    <a href="#" class="">Leer más</a>
+                                    <a href="../php/event_detail.php">Leer más</a>
                                 </div>
                             </div>
                         </div>
@@ -155,7 +155,7 @@
                             <div class="card premiere_section">
                                 <img src="./img/concierto03.jpg" class="card-img-top" alt="Concierto 03">
                                 <div class="card-body">
-                                    <a href="#" class="">Leer más</a>
+                                    <a href="../php/event_detail.php">Leer más</a>
                                 </div>
                             </div>
                         </div>
@@ -164,7 +164,7 @@
                             <div class="card premiere_section">
                                 <img src="./img/concierto03.jpg" class="card-img-top" alt="Concierto 03">
                                 <div class="card-body">
-                                    <a href="#" class="">Leer más</a>
+                                    <a href="../php/event_detail.php">Leer más</a>
                                 </div>
                             </div>
                         </div>

@@ -41,9 +41,9 @@
                             <ul>
                                 <li><a href="../index.php">Inicio</a></li>
                                 <li>
-                                    <a href="./php/category.php">Categorías<span class="fas fa-caret-down"></span></a>
+                                    <a href="../php/category.php">Categorías<span class="fas fa-caret-down"></span></a>
                                     <ul class="children">
-                                        <li><a href="#">Conciertos</a></li>
+                                        <li><a href="../php/event_detail.php">Conciertos</a></li>
                                         <li><a href="#">Infantiles</a></li>
                                         <li><a href="#">Familiares</a></li>
                                         <li><a href="#">Deportes</a></li>
@@ -65,10 +65,14 @@
         <!--Start Page Content-->
         <div class="min_height_container">
 
-            <div class="event_back_cover">
-                <img src="../img/concierto03.jpg" alt="Contra portada de concierto de música Pop">
-                <div class="row align-items-center inner">
-                    <img src="../img/concierto02.jpg" alt="Portada de concierto de música Pop">
+            <div class="row justify-content-center">
+                <div class="col-sm-8 fit_to_border">
+                    <div class="event_back_cover">
+                        <img src="../img/concierto03.jpg" alt="Contra portada de concierto de música Pop">
+                        <div class="row align-items-center inner">
+                            <img src="../img/concierto02.jpg" alt="Portada de concierto de música Pop">
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -76,13 +80,14 @@
                 <div class="col-sm-8">
 
                     <div class="row">
-                        <div class="col-sm">
+                        <div class="col-sm event_detail">
 
-                            <h1 class="middle_h1 after">Título del evento</h1>
+                            <h1>Título del evento</h1>
                             <h2>Gratis</h2>
-                            <p>Lugar</p>
-                            <p>Categoría</p>
-                            <p>Todo público</p>
+
+                            <h3>Lugar</h3>
+                            <h3>Categoría</h3>
+                            <h3>Todo público</h3>
 
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac est pharetra, vulputate
                                 lectus in, tincidunt libero. Pellentesque accumsan magna quis sapien maximus egestas. In
@@ -92,15 +97,17 @@
 
                     <div class="row">
 
-                        <div class="col-sm">
+                        <div class="col-sm-8 event_detail">
                             <select name="date" id="Select_date">
-                                <option value="17/05/21 - 1:00 pm" selected>Lunes 17 de mayo 1:00 p.m.</option>
-                                <option value="25/05/21 - 1:00 pm">Martes 25 de mayo 1:00 p.m.</option>
+                                <option value="17/05/21 - 1:00 pm" selected>Lunes 17 de mayo - 1:00 p.m.</option>
+                                <option value="25/05/21 - 1:00 pm">Martes 25 de mayo - 1:00 p.m.</option>
                             </select>
                         </div>
 
-                        <div class="col-sm">
-                            <a href="../php/shop_info.php">Registrarse</a>
+                        <div class="col-sm event_detail">
+                            <div>
+                                <a href="../php/shop_info.php">Registrarse</a>
+                            </div>
                         </div>
 
                     </div>
@@ -117,7 +124,7 @@
                             <div class="card events_related">
                                 <img src="../img/concierto01.jpg" class="card-img-top" alt="Concierto 01">
                                 <div class="card-body">
-                                    <a href="#" class="">Leer más</a>
+                                    <a href="../php/event_detail.php">Leer más</a>
                                 </div>
                             </div>
                         </div>
@@ -126,7 +133,7 @@
                             <div class="card events_related">
                                 <img src="../img/concierto01.jpg" class="card-img-top" alt="Concierto 01">
                                 <div class="card-body">
-                                    <a href="#" class="">Leer más</a>
+                                    <a href="../php/event_detail.php">Leer más</a>
                                 </div>
                             </div>
                         </div>
@@ -135,7 +142,7 @@
                             <div class="card events_related">
                                 <img src="../img/concierto01.jpg" class="card-img-top" alt="Concierto 01">
                                 <div class="card-body">
-                                    <a href="#" class="">Leer más</a>
+                                    <a href="../php/event_detail.php">Leer más</a>
                                 </div>
                             </div>
                         </div>
@@ -144,7 +151,7 @@
                             <div class="card events_related">
                                 <img src="../img/concierto01.jpg" class="card-img-top" alt="Concierto 01">
                                 <div class="card-body">
-                                    <a href="#" class="">Leer más</a>
+                                    <a href="../php/event_detail.php">Leer más</a>
                                 </div>
                             </div>
                         </div>

@@ -15,6 +15,10 @@ Hind Madurai regular: 400
 //HTML Tags
 body{
     padding: 4em 0 0 0;
+
+    @include respond-to($large-desktop){
+        padding: 3em 0 0 0;
+    }
 }
 
 header{
@@ -56,7 +60,7 @@ h2{
 h3{
     margin: 0;
     padding: 0;
-    @include set_text('Poppins', 500, 1.4em, $dark_blue);
+    @include set_text('Poppins', 500, 1.2em, $dark_blue);
 }
 
 p{
@@ -646,6 +650,10 @@ footer{
     padding: 0;
     position: relative;
 
+    @include respond-to($large-desktop){
+        margin: 0 0 5em 0;
+    }
+
     img{
         width: 100%;
         height: auto;
@@ -661,6 +669,10 @@ footer{
         top: 0;
         left: 0;
         background: linear-gradient(rgba(255,255,255,0) 3%, $white);
+
+        @include respond-to($large-desktop){
+            background: linear-gradient(rgba(255,255,255,0) 1%, $white);
+        }
     }
 }
 
@@ -672,6 +684,10 @@ footer{
     top: 3em;
     position: absolute;
 
+    @include respond-to($large-desktop){
+        top: 4em;
+    }
+
     img{
         display: block;
         margin: auto;
@@ -679,7 +695,97 @@ footer{
         width: 87%;
         height: auto;
         border-radius: .5em;
+
+        @include respond-to($large-desktop){
+            width: 77%;
+        }
     }
+}
+
+.event_detail{
+    display: block;
+
+    h1{
+        &::after{
+            content: '';
+            display: block;
+            width: 1.9em;
+            padding-top: .25em;
+            border-bottom: .2em solid $yellow;
+            border-radius: .1em;
+        }
+    }
+
+    h2{
+        @include respond-to($large-desktop){
+            text-align: right;
+        }
+    }
+
+    h3{
+        margin: 1em 0;
+        padding: 0;
+    }
+
+    p{
+        margin: 0 0 2em 0;
+        padding: 0;
+
+        @include set_text('Hind Madurai', 400, 1em, $dark_blue);
+    }
+
+    select{
+        position: relative;
+        margin: 0;
+        padding: .7em .5em;
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-radius: .5em;
+        background: $light-gray;
+
+        @include set_text('Hind Madurai', 400, 1em, $dark_blue);
+
+        &::after{
+            content: '\25BC';
+        }
+
+        option{
+            position: absolute;
+            width: 100%;
+        }
+    }
+
+    div{
+        display: block;
+        margin: 0;
+        padding: 0;
+        width: 50%;
+
+        @include respond-to($large-desktop){
+            width: 100%;
+            height: 100%;
+        }
+
+        a{
+            display: block;
+            margin: .7em 0;
+            padding: .5em 1em;
+            width: 100%;
+            text-align: center;
+            text-decoration: none;
+            background: $light-blue;
+            border-radius: .5em;
+    
+            @include set_text('Poppins', 600, 1em, $white);
+
+            @include respond-to($large-desktop){
+                margin: 0;
+                height: 100%;
+            }
+        }
+    }
+
 }
 
 .events_related{
@@ -701,5 +807,13 @@ footer{
         text-align: center;
 
         @include set_text('Hind Madurai', 400, 1.2em, $white);
+    }
+}
+
+.fit_to_border{
+    padding: 0;
+
+    @include respond-to($large-desktop){
+        padding: 0 1em;
     }
 }
