@@ -90,7 +90,7 @@
 
                                     <p class="card-text">Lugar <br /> 17/05/21 - 1:00 p.m. <br /> Categoría</p>
 
-                                    <a href="../php/event_detail.php" class=""><i class="fas fa-arrow-right"></i></a>
+                                    <a href="../php/event_detail.php"><i class="fas fa-arrow-right"></i></a>
                                 </div>
                             </div>
 
@@ -107,7 +107,7 @@
 
                                     <p class="card-text">Lugar <br /> 17/05/21 - 1:00 p.m. <br /> Categoría</p>
 
-                                    <a href="../php/event_detail.php" class=""><i class="fas fa-arrow-right"></i></a>
+                                    <a href="../php/event_detail.php"><i class="fas fa-arrow-right"></i></a>
                                 </div>
                             </div>
 

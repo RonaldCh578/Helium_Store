@@ -8,12 +8,10 @@ Hind Madurai regular: 400
 */
 /********************************************MAIN ELEMENTS********************************************/
 body {
-  padding: 4em 0 0 0;
-}
-@media only screen and (min-width: 1200px) {
-  body {
-    padding: 3em 0 0 0;
-  }
+  padding: 3.5em 0 0 0;
+  /*@include respond-to($large-desktop){
+      padding: 3.5em 0 0 0;
+  }*/
 }
 
 header {
@@ -35,7 +33,7 @@ header {
 }
 
 h1 {
-  margin: 0.5em 0 0.7em 0;
+  margin: 0.7em 0;
   padding: 0;
   font-family: "Poppins";
   font-weight: 700;
@@ -107,6 +105,9 @@ footer ul li a {
   color: #F3F7F6;
   font-size: 2em;
 }
+footer ul li a:hover {
+  color: #00A7E1;
+}
 footer p {
   margin: 0;
   padding: 0.2em 0 2em 0;
@@ -139,7 +140,9 @@ footer p {
 }
 
 .min_height_container {
+  padding: 0 0 5em 0;
   min-height: calc(100vh - 11em);
+  background: #F3F7F6;
 }
 
 @media only screen and (min-width: 1200px) {
@@ -194,9 +197,9 @@ footer p {
   height: 100vh;
   background: #00A7E1;
   position: absolute;
-  top: 0;
-  right: -150%;
-  border-top-left-radius: 0.9em;
+  top: 3.6em;
+  left: -150%;
+  border-top-right-radius: 0.9em;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -204,24 +207,26 @@ footer p {
   .top_nav div ul {
     margin: 0;
     padding: 0;
-    width: 65%;
+    width: 70%;
     height: auto;
     background: none;
     position: absolute;
     top: unset;
-    right: unset;
+    left: unset;
     -webkit-transition: 0s;
     transition: 0s;
   }
 }
 .top_nav div ul li {
-  padding: 0.6em 0 0.6em 2em;
+  margin: 0 0 0 5.5em;
+  padding: 0.6em;
   list-style: none;
 }
 @media only screen and (min-width: 1200px) {
   .top_nav div ul li {
     display: inline-block;
     position: relative;
+    margin: 0;
     padding: 0.3em 1em;
   }
 }
@@ -254,8 +259,8 @@ footer p {
   color: #26374C;
 }
 .top_nav div ul li a {
-  text-decoration: none;
   display: block;
+  text-decoration: none;
   font-family: "Poppins";
   font-weight: 700;
   font-size: 1.2em;
@@ -265,8 +270,8 @@ footer p {
   .top_nav div ul li a {
     font-family: "Poppins";
     font-weight: 500;
-    font-size: 1.2em;
-    color: #00A7E1;
+    font-size: 1.1em;
+    color: #F3F7F6;
   }
 }
 .top_nav div ul li a span {
@@ -300,7 +305,7 @@ footer p {
 
 .mobile_menu_icon {
   margin: 0;
-  padding: 0.4em 0 2.7em 0;
+  padding: 0.4em 0 2.2em 0;
   width: 1.8em;
   height: 1.8em;
   float: left;
@@ -324,11 +329,11 @@ footer p {
 }
 
 #nav_options:checked ~ div ul {
-  right: -6.5em;
+  left: -6.5em;
 }
 @media only screen and (max-width: 767px) {
   #nav_options:checked ~ div ul {
-    right: -7.5em;
+    left: -4.5em;
   }
 }
 
@@ -736,7 +741,7 @@ footer p {
 }
 @media only screen and (min-width: 1200px) {
   .event_back_cover {
-    margin: 0 0 5em 0;
+    margin: 0 0 4em 0;
   }
 }
 .event_back_cover img {

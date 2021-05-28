@@ -14,11 +14,11 @@ Hind Madurai regular: 400
 
 //HTML Tags
 body{
-    padding: 4em 0 0 0;
+    padding: 3.5em 0 0 0;
 
-    @include respond-to($large-desktop){
-        padding: 3em 0 0 0;
-    }
+    /*@include respond-to($large-desktop){
+        padding: 3.5em 0 0 0;
+    }*/
 }
 
 header{
@@ -41,7 +41,7 @@ header{
 }
 
 h1{
-    margin: .5em 0 .7em 0;
+    margin: .7em 0;
     padding: 0;
     @include set_text('Poppins', 700, 1.6em, $dark_blue);
 }
@@ -93,6 +93,10 @@ footer{
                 display: inline-block;
                 color: $white;
                 font-size: 2em;
+
+                &:hover{
+                    color: $light-blue;
+                }
             }
         }
     }
@@ -124,7 +128,9 @@ footer{
 }
 
 .min_height_container{
+    padding: 0 0 5em 0;
     min-height: calc(100vh - 11em);
+    background: $white;
 }
 
 .middle_h1{
@@ -164,6 +170,7 @@ footer{
             float: right;
             width: 50%;
             display: block;
+            //position: relative;
         }
 
         ul{
@@ -173,30 +180,32 @@ footer{
             height: 100vh;
             background: $light-blue;
             position: absolute;
-            top: 0;
-            right: -150%;
-            border-top-left-radius: .9em;
+            top: 3.6em;
+            left: -150%;
+            border-top-right-radius: .9em;
             transition: .5s;
     
             @include respond-to($large-desktop) {
                 margin: 0;
                 padding: 0;
-                width: 65%;
+                width: 70%;
                 height: auto;
                 background: none;
                 position: absolute;
                 top: unset;
-                right: unset;
+                left: unset;
                 transition: 0s;
             }
     
             li{
-                padding: .6em 0 .6em 2em;
+                margin: 0 0 0 5.5em;
+                padding: .6em;
                 list-style: none;
     
                 @include respond-to($large-desktop) {
                     display: inline-block;
                     position: relative;
+                    margin: 0;
                     padding: .3em 1em;
                     //float: right;
                 }
@@ -230,12 +239,13 @@ footer{
                 }
     
                 a{
-                    text-decoration: none;
                     display: block;
+                    text-decoration: none;
+                    
                     @include set_text('Poppins', 700, 1.2em, $white);
     
                     @include respond-to($large-desktop) {
-                        @include set_text('Poppins', 500, 1.2em, $light-blue);
+                        @include set_text('Poppins', 500, 1.1em, $white);
                     }
     
                     span{
@@ -276,7 +286,7 @@ footer{
 
 .mobile_menu_icon{
     margin: 0;
-    padding: .4em 0 2.7em 0;
+    padding: .4em 0 2.2em 0;
     width: 1.8em;
     height: 1.8em;
     float: left;
@@ -299,10 +309,10 @@ footer{
 }
 
 #nav_options:checked ~ div ul{
-    right: -6.5em;
+    left: -6.5em;
 
     @include respond-to($tablet-portrait){
-        right: -7.5em;
+        left: -4.5em;
     }
 }
 
@@ -651,7 +661,7 @@ footer{
     position: relative;
 
     @include respond-to($large-desktop){
-        margin: 0 0 5em 0;
+        margin: 0 0 4em 0;
     }
 
     img{
