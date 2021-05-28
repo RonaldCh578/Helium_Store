@@ -167,9 +167,8 @@ footer{
         padding: 0;
 
         @include respond-to($large-desktop){
-            float: right;
-            width: 50%;
             display: block;
+            width: 47%;
             //position: relative;
         }
 
@@ -188,7 +187,7 @@ footer{
             @include respond-to($large-desktop) {
                 margin: 0;
                 padding: 0;
-                width: 70%;
+                width: 100%;
                 height: auto;
                 background: none;
                 position: absolute;
@@ -206,37 +205,16 @@ footer{
                     display: inline-block;
                     position: relative;
                     margin: 0;
-                    padding: .3em 1em;
+                    padding: .3em 1em .3em 2em;
                     //float: right;
-                }
-    
-                &:hover .children{
-                    display: block;
-                    margin: 0;
-                    padding: 1em;
-                    position: absolute;
-                    background: $light-blue;
-                    border-radius: .5em;
-    
-                    @include respond-to($large-desktop){
-                        width: 100%;
-                    }
-                    
-                    li{
+
+                    &:hover .children{
                         display: block;
-                        margin: .3em auto;
-                        padding: 0;
-                        width: 100%;
-    
-                        a{
-                            @include set_text('Poppins', 500, 1em, $white);
-    
-                            &:hover{
-                                color: $dark_blue;
-                            }
-                        }
                     }
+
                 }
+    
+                
     
                 a{
                     display: block;
@@ -245,7 +223,7 @@ footer{
                     @include set_text('Poppins', 700, 1.2em, $white);
     
                     @include respond-to($large-desktop) {
-                        @include set_text('Poppins', 500, 1.1em, $white);
+                        @include set_text('Poppins', 500, 1em, $white);
                     }
     
                     span{
@@ -258,29 +236,44 @@ footer{
         }
     
         ul .children{
-            right: 0%;
+            display: block;
+            margin: 0;
+            padding: 1em;
+            position: static;
             height: unset;
-            position: unset;
             background: none;
+
+            @include respond-to($large-desktop){
+                display: none;
+                position: absolute;
+                width: 100%;
+                background: $light-blue;
+                border-radius: .5em;
+            }
     
             li{
                 margin: 0;
                 padding: .4em 2em;
+
+                @include respond-to($large-desktop){
+                    margin: .3em auto;
+                    padding: 0;
+                    width: 100%;
+                }
     
                 a{
-                    font-size: 1.1em;
-                    font-weight: 500;
+                    @include set_text('Poppins', 500, 1.1em, $white);
+
+                    @include respond-to($large-desktop){
+                        font-size: 1em;
+        
+                        &:hover{
+                            color: $dark_blue;
+                        }
+                    }
                 }
             }
         }
-    }
-}
-
-.children{
-    display: block;
-
-    @include respond-to($large-desktop){
-        display: none;
     }
 }
 

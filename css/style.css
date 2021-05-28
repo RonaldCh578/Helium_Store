@@ -185,9 +185,8 @@ footer p {
 }
 @media only screen and (min-width: 1200px) {
   .top_nav div {
-    float: right;
-    width: 50%;
     display: block;
+    width: 47%;
   }
 }
 .top_nav div ul {
@@ -207,7 +206,7 @@ footer p {
   .top_nav div ul {
     margin: 0;
     padding: 0;
-    width: 70%;
+    width: 100%;
     height: auto;
     background: none;
     position: absolute;
@@ -227,36 +226,11 @@ footer p {
     display: inline-block;
     position: relative;
     margin: 0;
-    padding: 0.3em 1em;
+    padding: 0.3em 1em 0.3em 2em;
   }
-}
-.top_nav div ul li:hover .children {
-  display: block;
-  margin: 0;
-  padding: 1em;
-  position: absolute;
-  background: #00A7E1;
-  border-radius: 0.5em;
-}
-@media only screen and (min-width: 1200px) {
   .top_nav div ul li:hover .children {
-    width: 100%;
+    display: block;
   }
-}
-.top_nav div ul li:hover .children li {
-  display: block;
-  margin: 0.3em auto;
-  padding: 0;
-  width: 100%;
-}
-.top_nav div ul li:hover .children li a {
-  font-family: "Poppins";
-  font-weight: 500;
-  font-size: 1em;
-  color: #F3F7F6;
-}
-.top_nav div ul li:hover .children li a:hover {
-  color: #26374C;
 }
 .top_nav div ul li a {
   display: block;
@@ -270,7 +244,7 @@ footer p {
   .top_nav div ul li a {
     font-family: "Poppins";
     font-weight: 500;
-    font-size: 1.1em;
+    font-size: 1em;
     color: #F3F7F6;
   }
 }
@@ -280,26 +254,45 @@ footer p {
   font-size: 0.9em;
 }
 .top_nav div ul .children {
-  right: 0%;
+  display: block;
+  margin: 0;
+  padding: 1em;
+  position: static;
   height: unset;
-  position: unset;
   background: none;
+}
+@media only screen and (min-width: 1200px) {
+  .top_nav div ul .children {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background: #00A7E1;
+    border-radius: 0.5em;
+  }
 }
 .top_nav div ul .children li {
   margin: 0;
   padding: 0.4em 2em;
 }
-.top_nav div ul .children li a {
-  font-size: 1.1em;
-  font-weight: 500;
+@media only screen and (min-width: 1200px) {
+  .top_nav div ul .children li {
+    margin: 0.3em auto;
+    padding: 0;
+    width: 100%;
+  }
 }
-
-.children {
-  display: block;
+.top_nav div ul .children li a {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 1.1em;
+  color: #F3F7F6;
 }
 @media only screen and (min-width: 1200px) {
-  .children {
-    display: none;
+  .top_nav div ul .children li a {
+    font-size: 1em;
+  }
+  .top_nav div ul .children li a:hover {
+    color: #26374C;
   }
 }
 

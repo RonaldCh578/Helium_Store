@@ -43,12 +43,12 @@
                                 <li>
                                     <a href="../php/category.php">Categorías<span class="fas fa-caret-down"></span></a>
                                     <ul class="children">
-                                        <li><a href="#">Conciertos</a></li>
-                                        <li><a href="#">Infantiles</a></li>
-                                        <li><a href="#">Familiares</a></li>
-                                        <li><a href="#">Deportes</a></li>
-                                        <li><a href="#">Festivales</a></li>
-                                        <li><a href="#">Teatro y cultura</a></li>
+                                        <li><a href="#Conciertos">Conciertos</a></li>
+                                        <li><a href="#Infantiles">Infantiles</a></li>
+                                        <li><a href="#Familiares">Familiares</a></li>
+                                        <li><a href="#Deportes">Deportes</a></li>
+                                        <li><a href="#Festivales">Festivales</a></li>
+                                        <li><a href="#Teatro y cultura">Teatro y cultura</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#">Contáctenos</a></li>
