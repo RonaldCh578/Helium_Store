@@ -30,7 +30,7 @@
 
             <div class="col-sm-8">
                 <div class="row">
-                    <nav class="top_nav">
+                    <nav class="top_nav" aria-label="navigator">
                         <a href="../index.php"><img class="logo" src="../img/svg/logo.svg"
                                 alt="Logo de Helium Store"></a>
                         <input type="checkbox" id="nav_options">
@@ -63,7 +63,7 @@
         </header>
 
         <!--Start Page Content-->
-        <div class="min_height_container">
+        <div class="min_height_container" role="main" aria-label="main_content">
 
             <div class="row justify-content-center">
                 <div class="col-sm-8">
@@ -92,11 +92,26 @@
                         <div class="row">
                             <div class="col-sm">
 
-                                <label class="subtitle_shop_info" for="qty_tickets_bought">Cantidad</label>
+                                <label class="subtitle_shop_info" for="qty_tickets_adults">Adultos</label>
                                 <span>
                                     <button class="minus_border_radius" aria-label="minus button" type="button"><i
                                             class="fas fa-minus"></i></button>
-                                    <input name="qty_ticket" title="" id="qty_tickets_bought" value="0" min="0"
+                                    <input name="qty_ticket" title="Quatity of adults" id="qty_tickets_adults" value="0" min="0"
+                                        type="text">
+                                    <button class="plus_border_radius" aria-label="plus button" type="button"><i class="fas fa-plus"></i></button>
+                                </span>
+
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm">
+
+                                <label class="subtitle_shop_info" for="qty_tickets_children">Niños</label>
+                                <span>
+                                    <button class="minus_border_radius" aria-label="minus button" type="button"><i
+                                            class="fas fa-minus"></i></button>
+                                    <input name="qty_tickets_children" title="Quatity of children" id="qty_tickets_children" value="0" min="0"
                                         type="text">
                                     <button class="plus_border_radius" aria-label="plus button" type="button"><i class="fas fa-plus"></i></button>
                                 </span>
@@ -124,7 +139,7 @@
 
                                     <div class="row">
                                         <div class="col">
-                                            <p>2X adultos</p>
+                                            <p>1 Adulto</p>
                                         </div>
                                         <div class="col">
                                             <p>0</p>
@@ -164,10 +179,10 @@
                     <div class="col-sm">
                         <nav>
                             <ul>
-                                <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a></li>
-                                <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
-                                <li><a href="https://cr.linkedin.com/"><i class="fab fa-linkedin"></i></a></li>
-                                <li><a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></li>
+                                <li><a href="https://www.facebook.com/" aria-label="Facebook"><i class="fab fa-facebook-square"></i></a></li>
+                                <li><a href="https://www.instagram.com/" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://cr.linkedin.com/" aria-label="Linkedin"><i class="fab fa-linkedin"></i></a></li>
+                                <li><a href="https://www.youtube.com/" aria-label="Youtube"><i class="fab fa-youtube"></i></a></li>
                             </ul>
                         </nav>
                     </div>

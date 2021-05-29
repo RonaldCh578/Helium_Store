@@ -30,7 +30,7 @@
 
             <div class="col-sm-8">
                 <div class="row">
-                    <nav class="top_nav">
+                    <nav class="top_nav" aria-label="navigator">
                         <a href="../index.php"><img class="logo" src="../img/svg/logo.svg"
                                 alt="Logo de Helium Store"></a>
                         <input type="checkbox" id="nav_options">
@@ -43,12 +43,12 @@
                                 <li>
                                     <a href="../php/category.php">Categorías<span class="fas fa-caret-down"></span></a>
                                     <ul class="children">
-                                        <li><a href="#">Conciertos</a></li>
-                                        <li><a href="#">Infantiles</a></li>
-                                        <li><a href="#">Familiares</a></li>
-                                        <li><a href="#">Deportes</a></li>
-                                        <li><a href="#">Festivales</a></li>
-                                        <li><a href="#">Teatro y cultura</a></li>
+                                        <li><a href="#Conciertos">Conciertos</a></li>
+                                        <li><a href="#Infantiles">Infantiles</a></li>
+                                        <li><a href="#Familiares">Familiares</a></li>
+                                        <li><a href="#Deportes">Deportes</a></li>
+                                        <li><a href="#Festivales">Festivales</a></li>
+                                        <li><a href="#TeatroCultura">Teatro y cultura</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#">Contáctenos</a></li>
@@ -63,7 +63,7 @@
         </header>
 
         <!--Start Page Content-->
-        <div class="min_height_container">
+        <div class="min_height_container" role="main" aria-label="main_content">
 
             <div class="row justify-content-center">
                 <div class="col-sm-8">
@@ -113,10 +113,10 @@
                     <div class="col-sm">
                         <nav>
                             <ul>
-                                <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a></li>
-                                <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
-                                <li><a href="https://cr.linkedin.com/"><i class="fab fa-linkedin"></i></a></li>
-                                <li><a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></li>
+                                <li><a href="https://www.facebook.com/" aria-label="Facebook"><i class="fab fa-facebook-square"></i></a></li>
+                                <li><a href="https://www.instagram.com/" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://cr.linkedin.com/" aria-label="Linkedin"><i class="fab fa-linkedin"></i></a></li>
+                                <li><a href="https://www.youtube.com/" aria-label="Youtube"><i class="fab fa-youtube"></i></a></li>
                             </ul>
                         </nav>
                     </div>

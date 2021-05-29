@@ -141,7 +141,7 @@ footer p {
 
 .min_height_container {
   padding: 0 0 5em 0;
-  min-height: calc(100vh - 11em);
+  min-height: calc(100vh - 10em);
   background: #F3F7F6;
 }
 
@@ -322,12 +322,10 @@ footer p {
 }
 
 #nav_options:checked ~ div ul {
-  left: -6.5em;
-}
-@media only screen and (max-width: 767px) {
-  #nav_options:checked ~ div ul {
-    left: -4.5em;
-  }
+  left: -20.5%;
+  /*@include respond-to($tablet-portrait){
+      left: -4.5em;
+  }*/
 }
 
 /*****************************************SECONDARY ELEMENTS*****************************************/
@@ -425,9 +423,9 @@ footer p {
 
 .carousel_img {
   height: 12em;
-  border-radius: 0.5em;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 0.5em;
   -o-object-position: center center;
      object-position: center center;
 }
@@ -440,6 +438,44 @@ footer p {
 .carousel {
   margin: 2em 0 1em 0;
   border-radius: 0.5em;
+}
+
+.carousel-inner {
+  border-radius: 0.5em;
+}
+
+.carousel-item {
+  padding: 0 0.2em;
+}
+
+.carousel_control {
+  display: block;
+  margin: auto;
+  background: #26374C;
+  width: 10%;
+  height: 23%;
+  border-radius: 10em;
+  opacity: 1;
+}
+@media only screen and (min-width: 1200px) {
+  .carousel_control {
+    width: 6%;
+    height: 17%;
+  }
+}
+
+.carousel-control-next {
+  right: -2.5%;
+}
+
+.carousel-control-prev {
+  left: -2.5%;
+}
+
+.control_icon {
+  display: block;
+  margin: auto;
+  height: 1.5rem;
 }
 
 @media only screen and (min-width: 1200px) {
@@ -608,7 +644,7 @@ footer p {
   font-family: "Hind Madurai";
   font-weight: 400;
   font-size: 1.2em;
-  color: #a3aab3;
+  color: #26374C;
 }
 @media only screen and (min-width: 1200px) {
   .shop_info span input {

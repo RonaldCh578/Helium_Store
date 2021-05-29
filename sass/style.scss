@@ -129,7 +129,7 @@ footer{
 
 .min_height_container{
     padding: 0 0 5em 0;
-    min-height: calc(100vh - 11em);
+    min-height: calc(100vh - 10em);
     background: $white;
 }
 
@@ -302,11 +302,11 @@ footer{
 }
 
 #nav_options:checked ~ div ul{
-    left: -6.5em;
+    left: -20.5%;
 
-    @include respond-to($tablet-portrait){
+    /*@include respond-to($tablet-portrait){
         left: -4.5em;
-    }
+    }*/
 }
 
 
@@ -385,8 +385,8 @@ footer{
 
 .carousel_img{
     height: 12em;
-    border-radius: .5em;
     object-fit: cover;
+    border-radius: .5em;
     object-position: center center;
 
     @include respond-to($large-desktop){
@@ -397,6 +397,43 @@ footer{
 .carousel{
     margin: 2em 0 1em 0;
     border-radius: .5em;
+}
+
+.carousel-inner{
+    border-radius: .5em;
+}
+
+.carousel-item{
+    padding: 0 .2em;
+}
+
+.carousel_control{
+    display: block;
+    margin: auto;
+    background: $dark_blue;
+    width: 10%;
+    height: 23%;
+    border-radius: 10em;
+    opacity: 1;
+
+    @include respond-to($large-desktop){
+        width: 6%;
+        height: 17%;
+    }
+}
+
+.carousel-control-next{
+    right: -2.5%;
+}
+
+.carousel-control-prev{
+    left: -2.5%;
+}
+
+.control_icon{
+    display: block;
+    margin: auto;
+    height: 1.5rem;
 }
 
 //Category Page
@@ -532,7 +569,7 @@ footer{
             background: $light-gray;
             text-align: center;
 
-            @include set_text('Hind Madurai', 400, 1.2em, #a3aab3);
+            @include set_text('Hind Madurai', 400, 1.2em, $dark_blue);
 
             @include respond-to($large-desktop){
                 width: 10%;

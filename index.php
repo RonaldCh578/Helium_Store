@@ -30,7 +30,7 @@
 
             <div class="col-sm-8">
                 <div class="row">
-                    <nav class="top_nav">
+                    <nav class="top_nav" aria-label="navigator">
                         <a href="./index.php"><img class="logo" src="./img/svg/logo.svg" alt="Logo de Helium Store"></a>
                         <input type="checkbox" id="nav_options">
                         <label class="mobile_menu_icon" for="nav_options">
@@ -42,12 +42,12 @@
                                 <li>
                                     <a href="./php/category.php">Categorías<span class="fas fa-caret-down"></span></a>
                                     <ul class="children">
-                                        <li><a href="#">Conciertos</a></li>
-                                        <li><a href="#">Infantiles</a></li>
-                                        <li><a href="#">Familiares</a></li>
-                                        <li><a href="#">Deportes</a></li>
-                                        <li><a href="#">Festivales</a></li>
-                                        <li><a href="#">Teatro y cultura</a></li>
+                                        <li><a href="#Conciertos">Conciertos</a></li>
+                                        <li><a href="#Infantiles">Infantiles</a></li>
+                                        <li><a href="#Familiares">Familiares</a></li>
+                                        <li><a href="#Deportes">Deportes</a></li>
+                                        <li><a href="#Festivales">Festivales</a></li>
+                                        <li><a href="#TeatroCultura">Teatro y cultura</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#">Contáctenos</a></li>
@@ -62,7 +62,7 @@
         </header>
 
         <!--Start Page Content-->
-        <div class="min_height_container">
+        <div class="min_height_container" role="main" aria-label="main_content">
 
             <div class="row justify-content-center">
                 <div class="col-sm-8">
@@ -74,7 +74,7 @@
                             <form action="">
                                 <label for="searchBar"></label>
                                 <input placeholder="Buscar" name="search"
-                                    title="Ingrese una palabra clave para empezar a buscar" type="text" id="searchBar">
+                                    title="Ingrese una palabra clave para empezar a buscar" type="text" id="searchBar" aria-label="search bar">
                                 <button type="submit" aria-label="search button"><i class="fas fa-search"></i></button>
                             </form>
                         </div>
@@ -103,14 +103,14 @@
                                             alt="Concierto de Pop">
                                     </div>
                                 </div>
-                                <button class="carousel-control-prev" type="button"
+                                <button class="carousel-control-prev carousel_control" type="button"
                                     data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="carousel-control-prev-icon control_icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Previous</span>
                                 </button>
-                                <button class="carousel-control-next" type="button"
+                                <button class="carousel-control-next carousel_control" type="button"
                                     data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="carousel-control-next-icon control_icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Next</span>
                                 </button>
                             </div>
@@ -182,10 +182,10 @@
                     <div class="col-sm">
                         <nav>
                             <ul>
-                                <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a></li>
-                                <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
-                                <li><a href="https://cr.linkedin.com/"><i class="fab fa-linkedin"></i></a></li>
-                                <li><a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></li>
+                                <li><a href="https://www.facebook.com/" aria-label="Facebook"><i class="fab fa-facebook-square"></i></a></li>
+                                <li><a href="https://www.instagram.com/" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://cr.linkedin.com/" aria-label="Linkedin"><i class="fab fa-linkedin"></i></a></li>
+                                <li><a href="https://www.youtube.com/" aria-label="Youtube"><i class="fab fa-youtube"></i></a></li>
                             </ul>
                         </nav>
                     </div>
