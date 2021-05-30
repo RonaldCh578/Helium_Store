@@ -1,7 +1,15 @@
-@charset "UTF-8";
 /********************************************MAIN ELEMENTS********************************************/
 body {
   padding: 3.5em 0 0 0;
+}
+body::-webkit-scrollbar {
+  width: 0.4em;
+  background: #26374C;
+}
+body::-webkit-scrollbar-thumb {
+  width: 0.4em;
+  background: #00A7E1;
+  border-radius: 0.5em;
 }
 
 header {
@@ -836,6 +844,61 @@ footer p {
 
 .event_detail {
   display: block;
+  /*select{
+      position: relative;
+      margin: 0;
+      padding: .7em .5em;
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: .5em;
+      background: $light-gray;
+
+      @include set_text('Hind Madurai', 400, 1em, $dark_blue);
+
+      &::after{
+          content: '\25BC';
+      }
+
+      option{
+          position: absolute;
+          width: 100%;
+      }
+  }*/
+  /*div{
+      display: block;
+      margin: 0;
+      padding: 0;
+      width: 50%;
+
+      @include respond-to($large-desktop){
+          width: 100%;
+          height: 100%;
+      }
+
+      a{
+          display: block;
+          margin: .7em 0;
+          padding: .5em 1em;
+          width: 100%;
+          text-align: center;
+          text-decoration: none;
+          background: $light-blue;
+          border-radius: .5em;
+
+          @include set_text('Poppins', 700, 1em, $white);
+
+          @include respond-to($large-desktop){
+              margin: 0;
+              height: 100%;
+          }
+
+          &:hover{
+              color: $dark_blue;
+              background: $yellow;
+          }
+      }
+  }*/
 }
 .event_detail h1::after {
   content: "";
@@ -862,47 +925,114 @@ footer p {
   font-size: 1em;
   color: #26374C;
 }
-.event_detail select {
-  position: relative;
+.event_detail form {
   margin: 0;
-  padding: 0.7em 0.5em;
+  padding: 0;
+}
+
+.select_box {
+  display: block;
   width: 100%;
-  height: 100%;
-  border: none;
+  position: relative;
+}
+.select_box .selected {
+  position: relative;
+  display: block;
+  /*width: 100%;
+  height: auto;*/
+  margin: auto;
+  margin-bottom: 0.5em;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  background: #C4CCD7;
   border-radius: 0.5em;
-  background: #DFE3E8;
   font-family: "Hind Madurai";
   font-weight: 400;
   font-size: 1em;
   color: #26374C;
 }
-.event_detail select::after {
-  content: "▼";
-}
-.event_detail select option {
+.select_box .selected::after {
+  content: "";
+  background: url(../img/svg/caret-down-solid.svg);
+  background-repeat: no-repeat;
   position: absolute;
-  width: 100%;
+  width: 1em;
+  height: 100%;
+  right: 0.5em;
+  top: 0.4em;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
-.event_detail div {
+.select_box .options_container {
+  position: absolute;
+  background: #C4CCD7;
+  width: 100%;
+  max-height: 0;
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  border-radius: 0.5em;
+  overflow: hidden;
+  z-index: 9;
+}
+.select_box .options_container::-webkit-scrollbar {
+  width: 0.4em;
+  background: #26374C;
+  border-radius: 0 0.5em 0.5em 0;
+}
+.select_box .options_container::-webkit-scrollbar-thumb {
+  width: 0.4em;
+  background: #00A7E1;
+  border-radius: 0 0.5em 0.5em 0;
+}
+.select_box .options_container.active {
+  max-height: 8em;
+  opacity: 1;
+  overflow-y: scroll;
+}
+.select_box .option {
+  margin: 0;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+.select_box .option:hover {
+  background: #00A7E1;
+}
+.select_box .option:hover label {
+  color: #F3F7F6;
+}
+.select_box .option input {
+  display: none;
+}
+.select_box .option label {
+  cursor: pointer;
+  font-family: "Hind Madurai";
+  font-weight: 400;
+  font-size: 1em;
+  color: #26374C;
+}
+
+.submit_event_detail {
   display: block;
   margin: 0;
   padding: 0;
   width: 50%;
 }
 @media only screen and (min-width: 1200px) {
-  .event_detail div {
+  .submit_event_detail {
     width: 100%;
     height: 100%;
   }
 }
-.event_detail div a {
+.submit_event_detail button {
   display: block;
-  margin: 0.7em 0;
+  margin-bottom: 0.7em;
   padding: 0.5em 1em;
   width: 100%;
   text-align: center;
   text-decoration: none;
   background: #00A7E1;
+  border: none;
   border-radius: 0.5em;
   font-family: "Poppins";
   font-weight: 700;
@@ -910,12 +1040,11 @@ footer p {
   color: #F3F7F6;
 }
 @media only screen and (min-width: 1200px) {
-  .event_detail div a {
+  .submit_event_detail button {
     margin: 0;
-    height: 100%;
   }
 }
-.event_detail div a:hover {
+.submit_event_detail button:hover {
   color: #26374C;
   background: #F9AC1C;
 }

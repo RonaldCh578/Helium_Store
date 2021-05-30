@@ -95,22 +95,61 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <form action="">
 
-                        <div class="col-sm-8 event_detail">
-                            <select name="date" id="Select_date" aria-label="Schedule">
-                                <option value="17/05/21 - 1:00 pm" selected>Lunes 17 de mayo - 1:00 p.m.</option>
-                                <option value="25/05/21 - 1:00 pm">Martes 25 de mayo - 1:00 p.m.</option>
-                            </select>
-                        </div>
+                        <div class="row">
 
-                        <div class="col-sm event_detail">
-                            <div>
-                                <a href="../php/shop_info.php">Registrarse</a>
+                            <div class="col-sm-8">
+
+                                <div class="select_box">
+
+                                    <div class="selected">
+                                        Seleccione una fecha
+                                    </div>
+
+                                    <div class="options_container">
+
+                                        <div class="option" onclick="changeSelected('lbl_schedule1')">
+                                            <input type="radio" id="schedule1" name="optionSchedule" value="1">
+                                            <label for="schedule1" id="lbl_schedule1">Lunes 17 de mayo - 1:00
+                                                p.m.</label>
+                                        </div>
+
+                                        <div class="option" onclick="changeSelected('lbl_schedule2')">
+                                            <input type="radio" id="schedule2" name="optionSchedule" value="2">
+                                            <label for="schedule2" id="lbl_schedule2">Martes 25 de mayo - 1:00
+                                                p.m.</label>
+                                        </div>
+
+                                        <div class="option" onclick="changeSelected('lbl_schedule3')">
+                                            <input type="radio" id="schedule3" name="optionSchedule" value="3">
+                                            <label for="schedule3" id="lbl_schedule3">Lunes 1 de junio - 1:00
+                                                p.m.</label>
+                                        </div>
+
+                                        <div class="option" onclick="changeSelected('lbl_schedule4')">
+                                            <input type="radio" id="schedule4" name="optionSchedule" value="4">
+                                            <label for="schedule4" id="lbl_schedule4">Martes 9 de junio - 1:00
+                                                p.m.</label>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
                             </div>
+
+                            <div class="col-sm-4">
+
+                                <div class="submit_event_detail">
+                                    <button type="submit" aria-label="Buy tickets">Registrarse</button>
+                                </div>
+
+                            </div>
+
                         </div>
 
-                    </div>
+                    </form>
 
                     <div class="row">
                         <div class="col-sm">
@@ -170,10 +209,14 @@
                     <div class="col-sm">
                         <nav>
                             <ul>
-                                <li><a href="https://www.facebook.com/" aria-label="Facebook"><i class="fab fa-facebook-square"></i></a></li>
-                                <li><a href="https://www.instagram.com/" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
-                                <li><a href="https://cr.linkedin.com/" aria-label="Linkedin"><i class="fab fa-linkedin"></i></a></li>
-                                <li><a href="https://www.youtube.com/" aria-label="Youtube"><i class="fab fa-youtube"></i></a></li>
+                                <li><a href="https://www.facebook.com/" aria-label="Facebook"><i
+                                            class="fab fa-facebook-square"></i></a></li>
+                                <li><a href="https://www.instagram.com/" aria-label="Instagram"><i
+                                            class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://cr.linkedin.com/" aria-label="Linkedin"><i
+                                            class="fab fa-linkedin"></i></a></li>
+                                <li><a href="https://www.youtube.com/" aria-label="Youtube"><i
+                                            class="fab fa-youtube"></i></a></li>
                             </ul>
                         </nav>
                     </div>
@@ -185,6 +228,7 @@
         </footer>
     </div>
 
+    <script src="../js/main.js"></script>
 </body>
 
 </html>
