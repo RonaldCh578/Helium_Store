@@ -2,23 +2,11 @@
 @import 'utils';
 @import 'media-queries';
 
-/*
-Poppins regular: 500
-Poppins semi-bold: 600
-Poppins bold: 700
-
-Hind Madurai regular: 400
-*/
-
 /********************************************MAIN ELEMENTS********************************************/
 
 //HTML Tags
 body{
     padding: 3.5em 0 0 0;
-
-    /*@include respond-to($large-desktop){
-        padding: 3.5em 0 0 0;
-    }*/
 }
 
 header{
@@ -169,7 +157,6 @@ footer{
         @include respond-to($large-desktop){
             display: block;
             width: 47%;
-            //position: relative;
         }
 
         ul{
@@ -206,7 +193,6 @@ footer{
                     position: relative;
                     margin: 0;
                     padding: .3em 1em .3em 2em;
-                    //float: right;
 
                     &:hover .children{
                         display: block;
@@ -303,10 +289,6 @@ footer{
 
 #nav_options:checked ~ div ul{
     left: -20.5%;
-
-    /*@include respond-to($tablet-portrait){
-        left: -4.5em;
-    }*/
 }
 
 
@@ -379,6 +361,11 @@ footer{
             border-radius: .5em;
 
             @include set_text('Hind Madurai', 400, 1.2em, $white);
+
+            &:hover{
+                color: $dark_blue;
+                background: $yellow;
+            }
         }
     }
 }
@@ -484,6 +471,14 @@ footer{
         border-radius: .5em;
         float: right;
 
+        &:hover{
+            i{
+                color: $dark_blue;
+            }
+
+            background: $yellow;
+        }
+
         i{
             color: $white;
             font-size: 1.5em;
@@ -528,6 +523,11 @@ footer{
         background: $light-blue;
         
         @include set_text('Poppins', 700, 1em, $white);
+
+        &:hover{
+            color: $dark_blue;
+            background: $yellow;
+        }
     }
 }
 
@@ -593,6 +593,11 @@ footer{
         background: $light-blue;
 
         @include set_text('Poppins', 700, 1.1em, $white);
+
+        &:hover{
+            color: $dark_blue;
+            background: $yellow;
+        }
     }
 }
 
@@ -681,6 +686,11 @@ footer{
     }
 
     @include set_text('Poppins', 700, 1.1em, $white);
+
+    &:hover{
+        color: $dark_blue;
+        background: $yellow;
+    }
 }
 
 //Event datail page
@@ -817,11 +827,16 @@ footer{
             background: $light-blue;
             border-radius: .5em;
     
-            @include set_text('Poppins', 600, 1em, $white);
+            @include set_text('Poppins', 700, 1em, $white);
 
             @include respond-to($large-desktop){
                 margin: 0;
                 height: 100%;
+            }
+
+            &:hover{
+                color: $dark_blue;
+                background: $yellow;
             }
         }
     }
@@ -847,6 +862,11 @@ footer{
         text-align: center;
 
         @include set_text('Hind Madurai', 400, 1.2em, $white);
+
+        &:hover{
+            color: $dark_blue;
+            background: $yellow;
+        }
     }
 }
 

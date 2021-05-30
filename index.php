@@ -72,7 +72,6 @@
                         </div>
                         <div class="col-sm search_bar">
                             <form action="">
-                                <label for="searchBar"></label>
                                 <input placeholder="Buscar" name="search"
                                     title="Ingrese una palabra clave para empezar a buscar" type="text" id="searchBar" aria-label="search bar">
                                 <button type="submit" aria-label="search button"><i class="fas fa-search"></i></button>
