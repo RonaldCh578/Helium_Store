@@ -28,7 +28,7 @@
     <div class="container-fluid">
         <header class="row justify-content-center dark_blue fixed-top">
 
-            <div class="col-sm-8">
+            <div class="col col-sm-11 col-md-10 col-lg-8">
                 <div class="row">
                     <nav class="top_nav" aria-label="navigator">
                         <a href="../index.php"><img class="logo" src="../img/svg/logo.svg"
@@ -66,7 +66,7 @@
         <div class="min_height_container" role="main" aria-label="main_content">
 
             <div class="row justify-content-center">
-                <div class="col-sm-8">
+                <div class="col col-sm-11 col-md-10 col-lg-8col-sm-8">
                     <div class="row">
                         <div class="col-sm">
                             <h1 class="middle_h1 after">Compra de entradas</h1>
@@ -76,7 +76,7 @@
             </div>
 
             <div class="row justify-content-center">
-                <div class="col-sm-8">
+                <div class="col col-sm-11 col-md-10 col-lg-8">
                     <div class="row">
                         <div class="col-sm">
                             <p class="subtitle_shop_info">Campos disponibles: 19</p>
@@ -86,7 +86,7 @@
             </div>
 
             <div class="row justify-content-center">
-                <div class="col-sm-8 shop_info">
+                <div class="col col-sm-11 col-md-10 col-lg-8 shop_info">
                     <form action="../php/shop_info.php">
 
                         <div class="row">
@@ -174,7 +174,7 @@
         <!--End Page Content-->
 
         <footer class="row justify-content-center dark_blue">
-            <div class="col-sm-8">
+            <div class="col col-sm-11 col-md-10 col-lg-8">
                 <div class="row">
                     <div class="col-sm">
                         <nav>

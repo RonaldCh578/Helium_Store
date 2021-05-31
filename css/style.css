@@ -959,7 +959,7 @@ footer p {
   display: block;
   margin: 0;
   padding: 0;
-  width: 50%;
+  width: 100%;
 }
 @media only screen and (min-width: 1200px) {
   .submit_event_detail {
