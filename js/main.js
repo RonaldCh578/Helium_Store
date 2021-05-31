@@ -1,7 +1,7 @@
+let selected = document.getElementsByClassName("selected")[0];
 let optionContainer = document.body.getElementsByClassName("options_container")[0];
 
 function changeSelected(id){
-    let selected = document.getElementsByClassName("selected")[0];
     selected.innerHTML = document.getElementById(id).innerHTML;
     optionContainer.classList.remove("active");
 }
