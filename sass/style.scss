@@ -79,7 +79,7 @@ footer{
         justify-content: center;
 
         @include respond-to($large-desktop){
-            margin: 2em 0;
+            margin: 3em 0;
             justify-content: left;
         }
 
@@ -800,75 +800,17 @@ footer{
         padding: 0;
     }
 
-    /*select{
-        position: relative;
-        margin: 0;
-        padding: .7em .5em;
-        width: 100%;
-        height: 100%;
-        border: none;
-        border-radius: .5em;
-        background: $light-gray;
-
-        @include set_text('Hind Madurai', 400, 1em, $dark_blue);
-
-        &::after{
-            content: '\25BC';
-        }
-
-        option{
-            position: absolute;
-            width: 100%;
-        }
-    }*/
-
-    /*div{
-        display: block;
-        margin: 0;
-        padding: 0;
-        width: 50%;
-
-        @include respond-to($large-desktop){
-            width: 100%;
-            height: 100%;
-        }
-
-        a{
-            display: block;
-            margin: .7em 0;
-            padding: .5em 1em;
-            width: 100%;
-            text-align: center;
-            text-decoration: none;
-            background: $light-blue;
-            border-radius: .5em;
     
-            @include set_text('Poppins', 700, 1em, $white);
-
-            @include respond-to($large-desktop){
-                margin: 0;
-                height: 100%;
-            }
-
-            &:hover{
-                color: $dark_blue;
-                background: $yellow;
-            }
-        }
-    }*/
 }
 
 .select_box{
     display: block;
     width: 100%;
     position: relative;
-    //flex-direction: column;
 
     .selected{
         position: relative;
         display: block;
-        /*width: 100%;
-        height: auto;*/
         margin: auto;
         margin-bottom: .5em;
         padding: .5em 1em;
@@ -972,7 +914,6 @@ footer{
 
         @include respond-to($large-desktop){
             margin: 0;
-            //height: 100%;
         }
         
         &:hover{

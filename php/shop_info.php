@@ -18,7 +18,7 @@
     <!--Font awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <!--Main stylesheet-->
-    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/style.min.css" rel="stylesheet">
 
 </head>
 
@@ -48,7 +48,7 @@
                                         <li><a href="#Familiares">Familiares</a></li>
                                         <li><a href="#Deportes">Deportes</a></li>
                                         <li><a href="#Festivales">Festivales</a></li>
-                                        <li><a href="#Teatro y cultura">Teatro y cultura</a></li>
+                                        <li><a href="#TeatroCultura">Teatro y cultura</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#">Contáctenos</a></li>
@@ -187,7 +187,7 @@
                         </nav>
                     </div>
                     <div class="col-sm">
-                        <p>© Derechos reservados <br /> Designed by Ronald</p>
+                        <p>Helium Store <br /> © Derechos reservados <br /> Designed by Ronald</p>
                     </div>
                 </div>
             </div>
