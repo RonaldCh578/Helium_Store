@@ -77,7 +77,7 @@
 
             <div class="row justify-content-center">
                 <div class="col col-sm-11 col-md-10 col-lg-8">
-                    <form action="../php/confirmation.php">
+                    <form action="confirmation.php">
 
                         <div class="row">
                             <div class="col-sm">

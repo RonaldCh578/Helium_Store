@@ -95,7 +95,7 @@
                         </div>
                     </div>
 
-                    <form action="">
+                    <form action="shop_info.php" method="post">
 
                         <div class="row">
 

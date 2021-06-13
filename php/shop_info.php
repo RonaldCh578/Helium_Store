@@ -66,7 +66,7 @@
         <div class="min_height_container" role="main" aria-label="main_content">
 
             <div class="row justify-content-center">
-                <div class="col col-sm-11 col-md-10 col-lg-8col-sm-8">
+                <div class="col col-sm-11 col-md-10 col-lg-8">
                     <div class="row">
                         <div class="col-sm">
                             <h1 class="middle_h1 after">Compra de entradas</h1>
@@ -87,7 +87,7 @@
 
             <div class="row justify-content-center">
                 <div class="col col-sm-11 col-md-10 col-lg-8 shop_info">
-                    <form action="../php/shop_info.php">
+                    <form action="pay_contact_info.php">
 
                         <div class="row">
                             <div class="col-sm">
