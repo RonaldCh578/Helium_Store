@@ -18,7 +18,7 @@
     <!--Font awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <!--Main stylesheet-->
-    <link href="../css/style.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
 
 </head>
 
@@ -51,7 +51,6 @@
                                         <li><a href="#TeatroCultura">Teatro y cultura</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">Contáctenos</a></li>
                             </ul>
                         </div>
 
@@ -147,6 +146,10 @@
 
                         </div>
 
+                    </div>
+
+                    <div class="row">
+                        <button class="btn_backHome_confirmation">Ver más</button>
                     </div>
 
                 </div>

@@ -18,7 +18,7 @@
     <!--Font awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <!--Main stylesheet-->
-    <link href="../css/style.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
 
 </head>
 
@@ -51,7 +51,6 @@
                                         <li><a href="#TeatroCultura">Teatro y cultura</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">Contáctenos</a></li>
                             </ul>
                         </div>
 
@@ -83,9 +82,16 @@
                         <div class="col-sm event_detail">
 
                             <h1>Título del evento</h1>
-                            <h2>Gratis</h2>
 
-                            <h3>Lugar</h3>
+                            <div class="row">
+                                <div class="col p-0">
+                                    <h3 class="m-0">Lugar</h3>
+                                </div>
+                                <div class="col p-0">
+                                    <h2 class="m-0">Gratis</h2>
+                                </div>
+                            </div>
+
                             <h3>Categoría</h3>
                             <h3>Todo público</h3>
 
@@ -193,6 +199,10 @@
                                     <a href="../php/event_detail.php">Leer más</a>
                                 </div>
                             </div>
+                        </div>
+
+                        <div class="row">
+                            <a class="btn_backHome_confirmation" href="../php/category.php#category">Ver más</a>
                         </div>
 
                     </div>

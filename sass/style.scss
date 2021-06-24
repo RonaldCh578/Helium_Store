@@ -57,7 +57,7 @@ h2{
 }
 
 h3{
-    margin: 0;
+    margin: 1em 0 0 0;
     padding: 0;
     @include set_text('Poppins', 500, 1.2em, $dark_blue);
 }
@@ -113,6 +113,10 @@ footer{
             @include set_text('Poppins', 500, .9em, $white);
         }
     }
+}
+
+button{
+    border: none;
 }
 
 //Classes
@@ -185,12 +189,13 @@ footer{
             @include respond-to($large-desktop) {
                 margin: 0;
                 padding: 0;
-                width: 100%;
+                width: auto;
                 height: auto;
                 background: none;
                 position: absolute;
                 top: unset;
                 left: unset;
+                right: 17%;
                 transition: 0s;
             }
     
@@ -465,7 +470,6 @@ footer{
         margin: 0;
         padding: 0;
         width: 100%;
-        text-align: right;
     }
     
     p{
@@ -684,7 +688,7 @@ footer{
 
 .btn_backHome_confirmation{
     display: block;
-    margin: 1em auto 3em auto;
+    margin: 1.5em auto 0;
     padding: .5em 1.2em;
     width: 60%;
     border-radius: .5em;
@@ -693,7 +697,7 @@ footer{
     text-decoration: none;
 
     @include respond-to($large-desktop){
-        width: 25%
+        width: 25%;
     }
 
     @include set_text('Poppins', 700, 1.1em, $white);
@@ -712,7 +716,7 @@ footer{
     position: relative;
 
     @include respond-to($large-desktop){
-        margin: 0 0 4em 0;
+        margin: 0 0 2.5em 0;
     }
 
     img{
@@ -732,7 +736,7 @@ footer{
         background: linear-gradient(rgba(255,255,255,0) 3%, $white);
 
         @include respond-to($large-desktop){
-            background: linear-gradient(rgba(255,255,255,0) 1%, $white);
+            background: $white;
         }
     }
 }
@@ -746,7 +750,7 @@ footer{
     position: absolute;
 
     @include respond-to($large-desktop){
-        top: 4em;
+        top: 2em;
     }
 
     img{
@@ -758,7 +762,7 @@ footer{
         border-radius: .5em;
 
         @include respond-to($large-desktop){
-            width: 77%;
+            width: 90%;
         }
     }
 }

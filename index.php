@@ -18,7 +18,7 @@
     <!--Font awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <!--Main stylesheet-->
-    <link href="./css/style.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
 
 </head>
 
@@ -50,7 +50,6 @@
                                         <li><a href="#TeatroCultura">Teatro y cultura</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">Contáctenos</a></li>
                             </ul>
                         </div>
 
@@ -68,7 +67,7 @@
                 <div class="col col-sm-11 col-md-10 col-lg-8">
                     <div class="row">
                         <div class="col-sm">
-                            <h1>Entretenimiento para todos los gustos!</h1>
+                            <h1>Entretenimiento para todos los gustos</h1>
                         </div>
                         <div class="col-sm search_bar">
                             <form action="">
@@ -168,6 +167,9 @@
                             </div>
                         </div>
 
+                    </div>
+                    <div class="row">
+                        <a class="btn_backHome_confirmation" href="../php/category.php">Ver más</a>
                     </div>
                 </div>
             </div>
