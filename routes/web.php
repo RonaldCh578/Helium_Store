@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EventController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,13 +14,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('index');
-});
+});*/
 
-Route::get('/event_detail', function () {
-    return view('event_detail');
-});
+/*Route::resource('/', EventController::class, 'show');*/
+Route::get('/', [EventController::class, 'show']);
+
+Route::get('/category/{categoria}', [EventController::class, 'showCategories']);
+
+Route::get('/event_detail/{id}', [EventController::class, 'showDetails']);
 
 Route::get('/confirmation', function () {
     return view('confirmation');
@@ -33,6 +37,3 @@ Route::get('/shop_info', function () {
     return view('shop_info');
 });
 
-Route::get('/category', function () {
-    return view('category');
-});
