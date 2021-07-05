@@ -18,7 +18,7 @@
     <!--Font awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <!--Main stylesheet-->
-    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/style.min.css" rel="stylesheet">
 
 </head>
 
@@ -158,15 +158,6 @@
                     </div>
 
                     <div class="row">
-
-                        <div class="col-sm-4">
-                            <div class="card events_related">
-                                <img src="../img/concierto01.jpg" class="card-img-top" alt="Concierto 01">
-                                <div class="card-body">
-                                    <a href="../php/event_detail.php">Leer más</a>
-                                </div>
-                            </div>
-                        </div>
 
                         <div class="col-sm-4">
                             <div class="card events_related">
