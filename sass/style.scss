@@ -142,6 +142,13 @@ footer{
     background: $dark_blue;
 }
 
+.card_event{
+    height: 65%;
+    width: auto;
+    object-fit: cover;
+    object-position: center center;
+}
+
 .logo{
     margin: auto;
     padding: .1em;
@@ -185,12 +192,13 @@ footer{
             @include respond-to($large-desktop) {
                 margin: 0;
                 padding: 0;
-                width: 100%;
+                width: auto;
                 height: auto;
                 background: none;
                 position: absolute;
                 top: unset;
                 left: unset;
+                right: 17%;
                 transition: 0s;
             }
     
@@ -356,6 +364,7 @@ footer{
     margin: .7em 0;
     padding: 0;
     width: 100%;
+    height: 13em;
     border-radius: .5em;
     background: $light-gray;
     border: none;
@@ -365,7 +374,7 @@ footer{
         a{
             display: block;
             margin: auto;
-            padding: .5em 1em;
+            padding: .3em 1em;
             background: $light-blue;
             text-decoration: none;
             text-align: center;
@@ -447,10 +456,18 @@ footer{
     margin: .7em 0;
     padding: 0;
     width: 100%;
+    height: 60vh;
     border-radius: .5em;
     background: $light-gray;
     border: none;
     overflow: hidden;
+
+    img{
+        height: 35%;
+        width: auto;
+        object-fit: cover;
+        object-position: center center;
+    }
 
     h2{
         margin: .5em 0 1em 0;
@@ -712,7 +729,7 @@ footer{
     position: relative;
 
     @include respond-to($large-desktop){
-        margin: 0 0 4em 0;
+        margin: 0 0 1em 0;
     }
 
     img{
@@ -746,19 +763,22 @@ footer{
     position: absolute;
 
     @include respond-to($large-desktop){
-        top: 4em;
+        top: 1em;
     }
 
     img{
         display: block;
-        margin: auto;
+        margin: 0 auto;
         padding: 0;
         width: 87%;
-        height: auto;
+        height: 14em;
         border-radius: .5em;
+        object-fit: cover;
+        object-position: center center;
 
         @include respond-to($large-desktop){
             width: 77%;
+            height: 66%;
         }
     }
 }

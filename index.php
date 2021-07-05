@@ -68,7 +68,7 @@
                 <div class="col col-sm-11 col-md-10 col-lg-8">
                     <div class="row">
                         <div class="col-sm">
-                            <h1>Entretenimiento para todos los gustos</h1>
+                            <h1>Entretenimiento para todos los gustos!</h1>
                         </div>
                         <div class="col-sm search_bar">
                             <form action="">
@@ -90,15 +90,15 @@
                             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="./img/concierto01.jpg" class="d-block w-100 carousel_img"
+                                        <img src="./img/concierto00.jpg" class="d-block w-100 carousel_img"
                                             alt="Concierto de Rock">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="./img/concierto02.jpg" class="d-block w-100 carousel_img"
+                                        <img src="./img/concierto01.jpg" class="d-block w-100 carousel_img"
                                             alt="Concierto guitarras acústicas">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="./img/concierto03.jpg" class="d-block w-100 carousel_img"
+                                        <img src="./img/concierto04.jpg" class="d-block w-100 carousel_img"
                                             alt="Concierto de Pop">
                                     </div>
                                 </div>
@@ -134,7 +134,7 @@
 
                         <div class="col-sm-4">
                             <div class="card premiere_section">
-                                <img src="./img/concierto03.jpg" class="card-img-top" alt="Concierto 03">
+                                <img src="./img/concierto03.jpg" class="card-img-top card_event" alt="Concierto 03">
                                 <div class="card-body">
                                     <a href="../php/event_detail.php">Leer más</a>
                                 </div>
@@ -143,7 +143,7 @@
 
                         <div class="col-sm-4">
                             <div class="card premiere_section">
-                                <img src="./img/concierto03.jpg" class="card-img-top" alt="Concierto 03">
+                                <img src="./img/concierto00.jpg" class="card-img-top card_event" alt="Concierto 03">
                                 <div class="card-body">
                                     <a href="../php/event_detail.php">Leer más</a>
                                 </div>
@@ -152,16 +152,7 @@
 
                         <div class="col-sm-4">
                             <div class="card premiere_section">
-                                <img src="./img/concierto03.jpg" class="card-img-top" alt="Concierto 03">
-                                <div class="card-body">
-                                    <a href="../php/event_detail.php">Leer más</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-4">
-                            <div class="card premiere_section">
-                                <img src="./img/concierto03.jpg" class="card-img-top" alt="Concierto 03">
+                                <img src="./img/concierto04.jpg" class="card-img-top card_event" alt="Concierto 03">
                                 <div class="card-body">
                                     <a href="../php/event_detail.php">Leer más</a>
                                 </div>

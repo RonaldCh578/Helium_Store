@@ -82,7 +82,7 @@
                         <div class="col-sm-4">
 
                             <div class="card category_card">
-                                <img src="../img/concierto01.jpg" class="card-img-top" alt="...">
+                                <img src="../img/concierto00.jpg" class="card-img-top category_card_event" alt="...">
                                 <div class="card-body">
                                     <h2 class="card-title">Lorem ipsum dolor sit amet.</h2>
 
@@ -99,7 +99,7 @@
                         <div class="col-sm-4">
 
                             <div class="card category_card">
-                                <img src="../img/concierto01.jpg" class="card-img-top" alt="...">
+                                <img src="../img/concierto04.jpg" class="card-img-top category_card_event" alt="...">
                                 <div class="card-body">
                                     <h2 class="card-title">Lorem ipsum dolor sit amet.</h2>
 
@@ -116,24 +116,7 @@
                         <div class="col-sm-4">
 
                             <div class="card category_card">
-                                <img src="../img/concierto01.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h2 class="card-title">Lorem ipsum dolor sit amet.</h2>
-
-                                    <h3 class="card-text">Gratis</h3>
-
-                                    <p class="card-text">Lugar <br /> 17/05/21 - 1:00 p.m. <br /> Categoría</p>
-
-                                    <a href="../php/event_detail.php" aria-label="Enter to event"><i class="fas fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="col-sm-4">
-
-                            <div class="card category_card">
-                                <img src="../img/concierto01.jpg" class="card-img-top" alt="...">
+                                <img src="../img/concierto03.jpg" class="card-img-top category_card_event" alt="...">
                                 <div class="card-body">
                                     <h2 class="card-title">Lorem ipsum dolor sit amet.</h2>
 

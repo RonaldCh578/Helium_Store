@@ -70,7 +70,7 @@
 
                     <div class="row">
                         <div class="col-sm">
-                            <h1 class="middle_h1 after">Si compra se ha procesado con éxito</h1>
+                            <h1 class="middle_h1 after">Su compra se ha procesado con éxito</h1>
                         </div>
                     </div>
 
@@ -78,22 +78,59 @@
                         <div class="col-sm">
                             <h2>Resumen</h2>
                             <div class="confirmation_detail">
-
                                 <div class="row">
-                                    <div class="col">
-                                        <p>2X Adultos</p>
+
+                                    <div class="col-12">
+                                        <h2>Nombre Evento</h2>
                                     </div>
-                                    <div class="col">
-                                        <p>₡0</p>
+                                    <div class="col-6 ">
+                                        <p class="text-start">Ubicación</p>
                                     </div>
+                                    <div class="col-6 ">
+                                        <p class="text-start">Categoría</p>
+                                    </div>
+                                    <div class="col-6 ">
+                                        <p class="text-start">Fecha</p>
+                                    </div>
+                                    <div class="col-6 ">
+                                        <p class="text-start">Hora</p>
+                                    </div>
+                                    <div class="col-12">
+                                        <h3>Facturación</h3>
+                                    </div>
+                                    <div class="col-12 ">
+                                        <p class="text-start">Nombre completo</p>
+                                    </div>
+                                    <div class="col-12 ">
+                                        <p class="text-start">Correo electrónico</p>
+                                    </div>
+                                    <div class="col-12 ">
+                                        <h3>Entradas reservadas</h3>
+                                    </div>
+                                    <div class="col-6 text-center">
+                                        <p>Adulto: 1</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p>$100</p>
+                                    </div>
+                                    <div class="col-6 text-center">
+                                        <p>Menor: 2</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p>$100</p>
+                                    </div>
+
+                                    <div class="registrarse-line margin-bottom-0"></div>
+
+                                    <div class="col-6 text-center">
+                                        <p class="fw-bold">Total</p>
+                                    </div>
+                                    <div class="col-6 text-center">
+                                        <p class="fw-bold">$200</p>
+                                    </div>
+
                                 </div>
 
-                                <div class="row">
-                                    <div class="col">
-                                        <p>Total: ₡0</p>
-                                    </div>
-                                </div>
-                                
                             </div>
                         </div>
                     </div>
@@ -113,10 +150,14 @@
                     <div class="col-sm">
                         <nav>
                             <ul>
-                                <li><a href="https://www.facebook.com/" aria-label="Facebook"><i class="fab fa-facebook-square"></i></a></li>
-                                <li><a href="https://www.instagram.com/" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
-                                <li><a href="https://cr.linkedin.com/" aria-label="Linkedin"><i class="fab fa-linkedin"></i></a></li>
-                                <li><a href="https://www.youtube.com/" aria-label="Youtube"><i class="fab fa-youtube"></i></a></li>
+                                <li><a href="https://www.facebook.com/" aria-label="Facebook"><i
+                                            class="fab fa-facebook-square"></i></a></li>
+                                <li><a href="https://www.instagram.com/" aria-label="Instagram"><i
+                                            class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://cr.linkedin.com/" aria-label="Linkedin"><i
+                                            class="fab fa-linkedin"></i></a></li>
+                                <li><a href="https://www.youtube.com/" aria-label="Youtube"><i
+                                            class="fab fa-youtube"></i></a></li>
                             </ul>
                         </nav>
                     </div>

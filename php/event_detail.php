@@ -18,7 +18,7 @@
     <!--Font awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <!--Main stylesheet-->
-    <link href="../css/style.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
 
 </head>
 
@@ -70,7 +70,7 @@
                     <div class="event_back_cover">
                         <img src="../img/concierto03.jpg" alt="Contra portada de concierto de música Pop">
                         <div class="row align-items-center inner">
-                            <img src="../img/concierto02.jpg" alt="Portada de concierto de música Pop">
+                            <img src="../img/concierto04.jpg" alt="Portada de concierto de música Pop">
                         </div>
                     </div>
                 </div>
