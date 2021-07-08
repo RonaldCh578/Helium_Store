@@ -7,7 +7,7 @@
 
             <div class="row">
                 <div class="col-sm">
-                    <h1 class="middle_h1 after">Si compra se ha procesado con éxito</h1>
+                    <h1 class="middle_h1 after">Su compra se ha procesado con éxito</h1>
                 </div>
             </div>
 
