@@ -18,9 +18,10 @@ class CreateRegistroTable extends Migration
             $table->integer('tickets_adultos');
             $table->integer('tickets_infantiles');
             $table->datetime('fecha_compra');
-            $table->foreignId('id_evento')->constrained('evento');
+            $table->foreignId('id_evento')->constrained('eventos');
             $table->foreignId('id_usuario')->constrained('usuario');
             $table->foreignId('id_fecha')->constrained('fechas');
+            $table->timestamps();
         });
     }
 

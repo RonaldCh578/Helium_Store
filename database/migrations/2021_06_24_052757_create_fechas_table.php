@@ -16,7 +16,8 @@ class CreateFechasTable extends Migration
         Schema::create('fechas', function (Blueprint $table) {
             $table->id();
             $table->datetime('fecha_hora');
-            $table->foreignId('id_evento')->constrained('evento');
+            $table->foreignId('id_evento')->constrained('eventos');
+            $table->integer('cantidad_tickets');
         });
     }
 

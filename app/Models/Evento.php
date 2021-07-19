@@ -10,6 +10,6 @@ class Evento extends Model
     use HasFactory;
 
     protected $fillable = [
-        'id', 'titulo', 'lugar', 'categoria', 'precio', 'tipo_publico', 'description', 'img', 'cantidad_tickets', 'disponible'
+        'id', 'titulo', 'lugar', 'categoria', 'precio', 'tipo_publico', 'descripcion', 'img', 'cantidad_tickets', 'disponible'
     ];
 }
