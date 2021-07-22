@@ -15,9 +15,13 @@ class EventController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $dataSearch = $request->all();
+        $key = $dataSearch['search'];
+
+        $result = DB::select('SELECT * FROM eventos WHERE titulo LIKE "%'.$dataSearch['search'].'%" OR categoria LIKE "%'.$dataSearch['search'].'%" OR descripcion LIKE "%'.$dataSearch['search'].'%"' );
+        return view('search', compact('result', 'key'));
     }
 
     /**
@@ -48,9 +52,7 @@ class EventController extends Controller
             'descripcion' => 'required',
             'img' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
             'disponible' => 'required',
-            'fecha' => 'required',
-            'hora' => 'required',
-            'cantidad_tickets' => 'required',
+            
         ]);
 
         //
@@ -80,16 +82,34 @@ class EventController extends Controller
 
 
         $event = DB::select('SELECT * FROM eventos WHERE img = "' . $data['img'] . '"');
-        $fecha_hora = $data['fecha'] .' '. $data['hora'];
+        $createDate = false;
+        $i = 0;
 
-        DB::table("fechas")->insert([
-            'fecha_hora' => $fecha_hora,
-            'cantidad_tickets' => $data['cantidad_tickets'],
-            'id_evento' => $event[0]->id
+        while (!$createDate) {
+            if (!empty($data['cantidad_tickets'.$i])) {
+                $request->validate([
+                    'fecha'.$i => 'required',
+                    'hora'.$i => 'required',
+                    'cantidad_tickets'.$i => 'required',
+                ]);
 
-        ]);
+                $fecha_hora = $data['fecha'.$i] .' '. $data['hora'.$i];
+
+                DB::table("fechas")->insert([
+                    'fecha_hora' => $fecha_hora,
+                    'cantidad_tickets' => $data['cantidad_tickets'.$i],
+                    'id_evento' => $event[0]->id
+        
+                ]);
+                $i++; 
+            }else{
+                $createDate = true; 
+            }
+        }
+       
 
         return redirect("dashboard");
+        
     }
 
     /**
@@ -243,10 +263,7 @@ class EventController extends Controller
      * @param  \App\Models\Evento  $event
      * @return \Illuminate\Http\Response
      */
-    public function edit(Evento $event)
-    {
-        //
-    }
+   
 
     /**
      * Update the specified resource in storage.
@@ -255,9 +272,107 @@ class EventController extends Controller
      * @param  \App\Models\Evento  $event
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Evento $event)
+    public function update(Request $request, Evento $evento)
     {
+        $request->validate([
+            'titulo' => 'required',
+            'lugar' => 'required',
+            'categoria' => 'required',
+            'precio' => 'required',
+            'tipo_publico' => 'required',
+            'descripcion' => 'required',
+            'img' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+            'disponible' => 'required',
+            
+        ]);
+
         //
+        $data = $request->all();
+        $file = $request->file('img');
+
+        // generate a new filename. getClientOriginalExtension() for the file extension
+        $event = DB::select('SELECT * FROM eventos WHERE id = "' . $data['id_evento'] . '"');
+       
+        if ($file != null) {
+            $data['img'] = $event[0]->img; 
+
+            $path = $file->storeAs('public/img', $data['img']);
+
+            DB::table('eventos')->where('id', $data['id_evento'])->update([
+                'titulo' => $data['titulo'],
+                'lugar' => $data['lugar'],
+                'categoria' => $data['categoria'],
+                'precio' => $data['precio'],
+                'tipo_publico' => $data['tipo_publico'],
+                'descripcion' => $data['descripcion'],
+                'img' => $data['img'],
+                'disponible' => $data['disponible']
+            ]);
+            
+           
+        }else{
+            DB::table('eventos')->where('id', $data['id_evento'])->update([
+                'titulo' => $data['titulo'],
+                'lugar' => $data['lugar'],
+                'categoria' => $data['categoria'],
+                'precio' => $data['precio'],
+                'tipo_publico' => $data['tipo_publico'],
+                'descripcion' => $data['descripcion'],
+                'disponible' => $data['disponible']
+            ]);
+        }
+        // save to storage/app/public/imgs as the new $filename
+        
+        //
+
+        $createDate = false;
+        $i = 0;
+        $dates = DB::select('SELECT * FROM fechas WHERE id_evento = "' . $data['id_evento'] . '"');
+        $length = count($dates); 
+
+        while ($i < $length) {
+            $fecha_hora = $data['fecha'.$i] .' '. $data['hora'.$i];
+
+            DB::table('fechas')->where('id', $dates[$i]->id)->update([
+                'fecha_hora' => $fecha_hora,
+                'cantidad_tickets' => $data['cantidad_tickets'.$i],
+                'id_evento' => $data['id_evento']
+            ]);
+    
+            /*$dates[$i]->update([
+                'fecha_hora' => $fecha_hora,
+                'cantidad_tickets' => $data['cantidad_tickets'.$i],
+                'id_evento' => $data['id_evento']
+    
+            ]);*/
+
+            $i++;
+        }
+
+        while (!$createDate) {
+            if (!empty($data['cantidad_tickets'.$i])) {
+                $request->validate([
+                    'fecha'.$i => 'required',
+                    'hora'.$i => 'required',
+                    'cantidad_tickets'.$i => 'required',
+                ]);
+
+                $fecha_hora = $data['fecha'.$i] .' '. $data['hora'.$i];
+
+                DB::table("fechas")->insert([
+                    'fecha_hora' => $fecha_hora,
+                    'cantidad_tickets' => $data['cantidad_tickets'.$i],
+                    'id_evento' => $data['id_evento']
+        
+                ]);
+                $i++; 
+            }else{
+                $createDate = true; 
+            }
+        }
+       
+
+        return redirect("dashboard");
     }
 
     /**
@@ -266,18 +381,12 @@ class EventController extends Controller
      * @param  \App\Models\Evento  $event
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request, $id)
+    public function destroy( $id)
     {
-        $dates = DB::select('SELECT * FROM fechas WHERE id_evento = "' . $id . '"');
-
-        $length = count($dates);
-
-        for ($i=0; $i < $length; $i++) { 
-            DB::table('fechas')->whereId($dates[$i]->id)->delete();
-        }
         
-
-        DB::table('eventos')->whereId($id)->delete();
+        DB::table('eventos')->where('id', $id)->update([
+            'disponible' => 0
+        ]);
 
         return redirect('dashboard');
     }
@@ -290,9 +399,12 @@ class EventController extends Controller
         return view('auth.show', compact('event'));
     }
 
-    public function editEvent(Request $request, $id)
+    public function editEvent($id)
     {
+        $event = DB::select('SELECT * FROM eventos WHERE id = "' . $id . '"');
+        $dates = DB::select('SELECT * FROM fechas WHERE id_evento = "' . $id . '"');
 
-        return redirect('dashboard');
+        return view('auth.edit', compact('event', 'dates'));
+        
     }
 }

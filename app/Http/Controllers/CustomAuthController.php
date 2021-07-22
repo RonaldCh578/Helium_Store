@@ -65,13 +65,28 @@ class CustomAuthController extends Controller
     public function dashboard()
     {
         if (Auth::check()) {
+
             $events = DB::select('SELECT * FROM eventos WHERE disponible = 1');
+        
+            return view('auth.index', compact('events'));
+        }
+
+        return redirect("login")->withSuccess('You are not allowed to access');
+    }
+    
+    public function no_disponibles()
+    {
+        if (Auth::check()) {
+
+            $events = DB::select('SELECT * FROM eventos WHERE disponible = 0');
+        
             return view('auth.index', compact('events'));
         }
 
         return redirect("login")->withSuccess('You are not allowed to access');
     }
 
+    
     public function signOut()
     {
         Session::flush();
@@ -80,3 +95,5 @@ class CustomAuthController extends Controller
         return redirect('login');
     }
 }
+
+

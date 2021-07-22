@@ -92,11 +92,12 @@
 
         <hr>
         <h3>Fechas</h3>
-        <div class="col-xs-12 col-sm-12 col-md-12">
+        <a class="btn btn-primary" onclick="addDate()">Agregar fecha</a>
+        <div id="fechasContainer" class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <input type="date" name="fecha" id="fecha">
-                <input type="time" name="hora" id="hora">
-                <input type="number" min="0" step="1" name="cantidad_tickets" class="form-control" placeholder="cantidad_tickets">
+                <input type="date" name="fecha0" id="fecha0">
+                <input type="time" name="hora0" id="hora0">
+                <input type="number" min="0" step="1" name="cantidad_tickets0" class="form-control" placeholder="cantidad tickets">
             </div>
         </div>
 

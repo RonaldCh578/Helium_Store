@@ -461,12 +461,17 @@ button {
 .category_card {
     margin: 0.7em 0;
     padding: 0;
-    height: 60vh;
+    height: 75vh;
     width: 100%;
     border-radius: 0.5em;
     background: #dfe3e8;
     border: none;
     overflow: hidden;
+}
+@media only screen and (min-width: 1200px) {
+    .category_card {
+        height: 60vh;
+    }
 }
 .category_card h2 {
     margin: 0.5em 0 1em 0;
@@ -1006,4 +1011,10 @@ button {
     width: fit-content;
     height: fit-content;
     display: inline!important;
+}
+
+.card_overflow{
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    white-space: nowrap;
 }

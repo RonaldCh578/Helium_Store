@@ -6,6 +6,7 @@ let input_adult = document.getElementById("qty_tickets_adults");
 let input_children = document.getElementById("qty_tickets_children");
 
 let maximo_tickets = 0;
+let n_fechas = 0; 
 
 function changeSelected(id) {
     selected.innerHTML = document.getElementById(id).innerHTML;
@@ -130,7 +131,29 @@ function validateEmail(email) {
     return /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)
 }
 
+function addDate(){
+    let container = document.getElementById("fechasContainer");
 
+    n_fechas++;
+
+    container.insertAdjacentHTML("beforeend",'<div class="form-group"><input type="date" name="fecha'+n_fechas+'" id="fecha'+n_fechas+'"><input type="time" name="hora'+n_fechas+'" id="hora'+n_fechas+'"><input type="number" min="0" step="1" name="cantidad_tickets'+n_fechas+'" class="form-control" placeholder="cantidad tickets"></div>');
+
+}
+
+function checkDates(length){
+    if (n_fechas == 0) {
+        
+        n_fechas = length;
+        
+    }
+    
+    addDate();
+}
+
+
+function resetNFechas(){
+    n_fechas = 0; 
+}
 
 document.addEventListener("DOMContentLoaded", (event) => {
     console.log("DOM Loaded");

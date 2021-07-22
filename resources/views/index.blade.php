@@ -8,7 +8,8 @@
                 <h1>Entretenimiento para todos los gustos</h1>
             </div>
             <div class="col-sm search_bar">
-                <form action="">
+                <form action="/search" method="POST" enctype="multipart/form-data">
+                @csrf
                     <input placeholder="Buscar" name="search" title="Ingrese una palabra clave para empezar a buscar" type="text" id="searchBar" aria-label="search bar">
                     <button type="submit" aria-label="search button"><i class="fas fa-search"></i></button>
                 </form>
@@ -26,31 +27,35 @@
                 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <?php
-                        $length = count($events);
-                        $length = $length - 2;
+                        $length = count($events)-1;
+                        echo "length: ".$length;
+                        echo "length modificadito: ".$events[$length -1 ]-> titulo;
+                        //$length = $length - 2;
+                        
+                        $contador = $length -2;
                         ?>
 
-                        @foreach($events as $event)
-                        @if($event->id == $length)
+                        @for($i= $length; $i >= $contador; $i--)
+                        @if($i == $length)
                         <div class="carousel-item active">
-                            <a href="/event_detail/{{ $event->id }}">
-                                <img src="{{ asset('storage/img/'.$event->img) }}" class="d-block w-100 carousel_img" alt="{{ $event->titulo }}">
+                            <a href="/event_detail/{{ $events[$i]->id }}">
+                                <img src="{{ asset('storage/img/'.$events[$i]->img) }}" class="d-block w-100 carousel_img" alt="{{ $events[$i]->titulo }}">
                             </a>
                             <div class="carousel-caption d-none d-md-block">
-                                <h5 class="carousel-title">{{ $event->titulo }}</h5>
+                                <h5 class="carousel-title">{{ $events[$i]->titulo }}</h5>
                             </div>
                         </div>
-                        @elseif($event->id > $length)
+                        @else
                         <div class="carousel-item">
-                            <a href="/event_detail/{{ $event->id }}">
-                                <img src="{{ asset('storage/img/'.$event->img) }}" class="d-block w-100 carousel_img" alt="{{ $event->titulo }}">
+                            <a href="/event_detail/{{ $events[$i]->id }}">
+                                <img src="{{ asset('storage/img/'.$events[$i]->img) }}" class="d-block w-100 carousel_img" alt="{{ $events[$i]->titulo }}">
                             </a>
                             <div class="carousel-caption d-none d-md-block">
-                                <h5 class="carousel-title">{{ $event->titulo }}</h5>
+                                <h5 class="carousel-title">{{ $events[$i]->titulo }}</h5>
                             </div>
                         </div>
                         @endif
-                        @endforeach
+                        @endfor
                     </div>
                     <button class="carousel-control-prev carousel_control" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon control_icon" aria-hidden="true"></span>
@@ -80,8 +85,8 @@
     <div class="col col-sm-11 col-md-10 col-lg-8">
         <div class="row">
 
-            @for ($i = $length + 1; $i >= 0; $i--)
-            @if($i > $length - 5)
+            @for ($i = $length; $i >= 0; $i--)
+            @if($i > $length - 6)
             <div class="col-sm-4">
                 <div class="card premiere_section">
                     <img src="{{ asset('storage/img/'.$events[$i]->img) }}" class="card-img-top card-event" alt="{{ $events[$i]->titulo }}">
@@ -94,9 +99,11 @@
             @endfor
 
         </div>
+        @if($length > 5)
         <div class="row">
             <a class="btn_backHome_confirmation" href="/category/Todos los eventos">Ver más</a>
         </div>
+        @endif
     </div>
 </div>
 @endsection

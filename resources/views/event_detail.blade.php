@@ -26,7 +26,12 @@
                         <h3 class="m-0">{{ $eventDetail[0]->lugar }}</h3>
                     </div>
                     <div class="col p-0">
-                        <h2 class="m-0">₡{{ $eventDetail[0]->precio }}</h2>
+                        @if($eventDetail[0]->precio == 0)
+                            <h2 class="m-0">Gratis</h2>
+                        @else
+                            <h2 class="m-0">₡{{ $eventDetail[0]->precio }}</h2>
+                        @endif
+                        
                     </div>
                 </div>
 
@@ -45,11 +50,31 @@
                 <div class="col col-sm-11 col-md-10 col-lg-8">
 
                     <div class="select_box">
+                        <?php
+                            $agotado = false;
+                        ?>
+                        @foreach($eventDates as $eventDate)
+                            @if($eventDate->cantidad_tickets == 0)
+                                <?php
+                                    $agotado = true;
+                                ?>
+                            @else
+                                <?php
+                                    $agotado = false;
+                                ?>
+                            @break
+                            @endif
 
-                        <div class="selected">
-                            Seleccione una fecha
-                        </div>
-
+                        @endforeach
+                        @if($agotado)
+                            <div class="selected">
+                                AGOTADO
+                            </div>
+                        @else
+                            <div class="selected">
+                                Seleccione una fecha
+                            </div>
+                        @endif
                         <div class="options_container">
 
                             @foreach($eventDates as $eventDate)
@@ -110,7 +135,7 @@
             @if($eventsSelected[$i]->id != $eventDetail[0]->id)
             <div class="col-sm-4">
                 <div class="card premiere_section">
-                    <img src="../img/{{ $eventsSelected[$i]->img }}" class="card-img-top card-event" alt="{{ $eventsSelected[$i]->titulo }}">
+                    <img src="{{ asset('storage/img/'.$eventsSelected[$i]->img) }}" class="card-img-top card-event" alt="{{ $eventsSelected[$i]->titulo }}">
                     <div class="card-body">
                         <a href="/event_detail/{{ $eventsSelected[$i]->id }}">Leer más</a>
                     </div>

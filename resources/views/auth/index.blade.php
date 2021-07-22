@@ -7,7 +7,13 @@
             <h2>Administrador</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-success" href="{{route('auth.create')}}"> Crear nuevo evento</a>
+            <a class="btn btn-success" href="{{route('auth.create')}}" onclick="resetNFechas()"> Crear nuevo evento</a>
+ 
+            <a class="btn btn-secondary" href="{{route('auth.no_disponibles')}}" > Ver eventos no disponibles</a>
+           
+            <a class="btn btn-secondary" href="{{route('auth.index')}}" > Ver eventos disponibles</a>
+  
+            
         </div>
     </div>
 </div>
@@ -35,11 +41,14 @@
 
                 <a class="btn btn-primary" href="{{ route('events.show', $event->id) }}">Ver</a>
 
-                <a class="btn btn-primary" href="#">Editar</a>
+                <a class="btn btn-primary" href="{{ route('events.editEvent', $event->id) }}" onclick="resetNFechas()">Editar</a>
 
                 @csrf
+                @if($event->disponible == 1)
+                
+                <button type="submit" class="btn btn-primary">Quitar </button>
 
-                <button type="submit" class="btn btn-primary">Eliminar</button>
+                @endif
             </form>
         </td>
     </tr>
